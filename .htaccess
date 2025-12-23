@@ -1,0 +1,43 @@
+# IMPULCIA AFRIQUE - Configuration Apache
+# Redirections et optimisations pour https://impulcia-afrique.com/
+
+# Redirection www vers non-www (canonical)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.impulcia-afrique\.com [NC]
+    RewriteRule ^(.*)$ https://impulcia-afrique.com/$1 [R=301,L]
+</IfModule>
+
+# Redirection HTTP vers HTTPS
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://impulcia-afrique.com/$1 [R=301,L]
+</IfModule>
+
+# Compression GZIP pour améliorer les performances
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache des fichiers statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
+
+# Sécurité - Empêcher l'accès aux fichiers sensibles
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Page d'erreur personnalisée (optionnel)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html

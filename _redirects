@@ -1,0 +1,11 @@
+# Netlify Redirects (si hébergement Netlify)
+# Redirections pour les pages principales
+
+# Redirection www vers non-www
+https://www.impulcia-afrique.com/* https://impulcia-afrique.com/:splat 301
+
+# Redirection HTTP vers HTTPS
+http://impulcia-afrique.com/* https://impulcia-afrique.com/:splat 301
+
+# SPA fallback (si nécessaire)
+/*    /index.html   200

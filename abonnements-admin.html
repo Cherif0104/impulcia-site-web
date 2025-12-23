@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace gestionnaire Marketplace | Impulcia Afrique</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syncopate:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="grid-bg">
+    <nav class="fixed w-full z-50 glass px-8 py-5">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-emerald-600 flex items-center justify-center group cursor-pointer">
+            <div class="w-5 h-5 border-2 border-white group-hover:rotate-90 transition-transform duration-500"></div>
+          </div>
+          <span class="font-sync text-xl tracking-tighter">IMPULCIA<span class="text-emerald-400">.</span>ADMIN</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-semibold">
+          <a href="#produits" class="nav-link">Produits</a>
+          <a href="#packs" class="nav-link">Packs</a>
+          <a href="#paiements" class="nav-link">Paiements &amp; APIs</a>
+          <a href="#config" class="nav-link">Configuration</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-8">
+      <section class="max-w-7xl mx-auto mb-16">
+        <p class="section-tag">Back‑office marketplace (prototype UX)</p>
+        <h1 class="text-3xl md:text-4xl font-sync mb-4">ESPACE GESTIONNAIRE – MARKETPLACE D'ABONNEMENTS.</h1>
+        <p class="text-slate-400 text-sm md:text-base max-w-3xl leading-relaxed">
+          Cette page esquisse le futur espace d'administration de la marketplace : gestion des offres, des prix, des
+          intégrations de paiement (Wave, Stripe…) et des connexions avec des plateformes e‑commerce type Shopify.
+          L'objectif est de définir clairement les blocs fonctionnels avant une implémentation full‑stack.
+        </p>
+      </section>
+
+      <!-- Tuiles principales -->
+      <section id="produits" class="max-w-7xl mx-auto mb-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-slate-900/80 border border-slate-800">
+          <h2 class="text-sm font-sync text-emerald-400 tracking-[0.25em] mb-2">CATALOGUE PRODUITS</h2>
+          <p class="text-sm text-slate-300 mb-4">Créer, modifier, désactiver des abonnements (Microsoft, EdX, VPN…).</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li><span class="text-emerald-400 mr-1">•</span>CRUD complet (créer / éditer / supprimer).</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Gestion des prix MAD &amp; FCFA, durées, remises.</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Upload de logos &amp; visuels.</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-slate-900/80 border border-slate-800" id="packs">
+          <h2 class="text-sm font-sync text-emerald-400 tracking-[0.25em] mb-2">PACKS &amp; BUNDLES</h2>
+          <p class="text-sm text-slate-300 mb-4">Composer des packs (Intelligence, SkillBoost+, etc.) à partir du catalogue.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li><span class="text-emerald-400 mr-1">•</span>Associer plusieurs produits à un pack.</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Calcul automatique de la remise.</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Activation/désactivation par simple switch.</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-slate-900/80 border border-slate-800" id="paiements">
+          <h2 class="text-sm font-sync text-emerald-400 tracking-[0.25em] mb-2">PAIEMENTS &amp; APIs</h2>
+          <p class="text-sm text-slate-300 mb-4">Intégrer des fournisseurs de paiement et services financiers.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li><span class="text-emerald-400 mr-1">•</span>Connecteurs Wave / mobile money.</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Intégration Stripe (intentions de paiement, webhooks).</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Webhooks pour mise à jour des commandes.</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-slate-900/80 border border-slate-800" id="config">
+          <h2 class="text-sm font-sync text-emerald-400 tracking-[0.25em] mb-2">SHOPIFY &amp; INTÉGRATIONS</h2>
+          <p class="text-sm text-slate-300 mb-4">Prévoir un pont entre la marketplace et Shopify ou d'autres boutiques.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li><span class="text-emerald-400 mr-1">•</span>Synchronisation partielle du catalogue (produits/stock virtuel).</li>
+            <li><span class="text-emerald-400 mr-1">•</span>URL de redirection vers des pages Shopify spécifiques.</li>
+            <li><span class="text-emerald-400 mr-1">•</span>Gestion des clés API et secrets en environnement sécurisé.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Table prototype pour gestion produits -->
+      <section class="max-w-7xl mx-auto mb-16">
+        <h2 class="text-2xl font-sync mb-4">Vue liste des offres.</h2>
+        <div class="overflow-x-auto border border-slate-800 bg-slate-900/70">
+          <table class="min-w-full text-xs text-slate-300">
+            <thead class="bg-slate-900/80 text-[11px] uppercase tracking-[0.2em] text-slate-500">
+              <tr>
+                <th class="px-4 py-3 text-left">Produit</th>
+                <th class="px-4 py-3 text-left">Catégorie</th>
+                <th class="px-4 py-3 text-left">Prix (MAD)</th>
+                <th class="px-4 py-3 text-left">Actif</th>
+                <th class="px-4 py-3 text-left">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-slate-800/60">
+                <td class="px-4 py-3">Microsoft 365 – 12 mois</td>
+                <td class="px-4 py-3">Productivité</td>
+                <td class="px-4 py-3">99.00</td>
+                <td class="px-4 py-3">✅</td>
+                <td class="px-4 py-3 space-x-2">
+                  <button class="px-2 py-1 text-[10px] border border-slate-600 hover:border-emerald-400">Éditer</button>
+                  <button class="px-2 py-1 text-[10px] border border-red-500 text-red-400 hover:bg-red-500/10">Désactiver</button>
+                </td>
+              </tr>
+              <tr class="border-t border-slate-800/60">
+                <td class="px-4 py-3">Pack Intelligence</td>
+                <td class="px-4 py-3">Pack</td>
+                <td class="px-4 py-3">269.00</td>
+                <td class="px-4 py-3">✅</td>
+                <td class="px-4 py-3 space-x-2">
+                  <button class="px-2 py-1 text-[10px] border border-slate-600 hover:border-emerald-400">Éditer</button>
+                  <button class="px-2 py-1 text-[10px] border border-red-500 text-red-400 hover:bg-red-500/10">Désactiver</button>
+                </td>
+              </tr>
+              <!-- D'autres lignes seront générées dynamiquement côté back‑end -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Zone commentaires techniques -->
+      <section class="max-w-7xl mx-auto text-xs text-slate-500 space-y-2">
+        <h2 class="text-sm font-sync text-emerald-400 tracking-[0.25em] mb-2">Notes d'implémentation (tech).</h2>
+        <p>
+          • Cette page est volontairement statique pour l'instant. Elle servira de base à une future implémentation en
+          framework front (React / Vue / autre) et à une API back‑end (Node, Laravel, etc.).
+        </p>
+        <p>
+          • Les blocs "Paiements &amp; APIs" et "Shopify &amp; intégrations" accueilleront les formulaires de configuration
+          des clés API, endpoints, webhooks, etc.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -2265,5 +2265,19 @@
             <span class="mt-4 md:mt-0">ISO 9001 / ISO 27001 COMPLIANT • Aligné Startup Act Sénégal / SAE</span>
         </div>
     </footer>
+
+    <!-- Script conversion devises Marketplace -->
+    <script>
+      const MAD_TO_XOF = 61;
+      document.querySelectorAll('[data-price-mad]').forEach((el) => {
+        const mad = parseFloat(el.dataset.priceMad || '0');
+        if (!mad) return;
+        const xof = mad * MAD_TO_XOF;
+        const target = el.querySelector('[data-price-xof]');
+        if (target) {
+          target.textContent = `≈ ${xof.toLocaleString('fr-FR')} FCFA`;
+        }
+      });
+    </script>
 </body>
 </html>

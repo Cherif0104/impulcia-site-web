@@ -1,6 +1,38 @@
 // Smooth scroll pour la navigation interne et animations scroll-triggered
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      // Animation du bouton burger
+      const spans = mobileMenuBtn.querySelectorAll("span");
+      if (mobileMenu.classList.contains("hidden")) {
+        spans[0].style.transform = "rotate(0) translateY(0)";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "rotate(0) translateY(0)";
+      } else {
+        spans[0].style.transform = "rotate(45deg) translateY(8px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translateY(-8px)";
+      }
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        const spans = mobileMenuBtn.querySelectorAll("span");
+        spans[0].style.transform = "rotate(0) translateY(0)";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "rotate(0) translateY(0)";
+      });
+    });
+  }
+
   // Smooth scroll pour la navigation interne
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

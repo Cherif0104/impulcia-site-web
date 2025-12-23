@@ -1121,3 +1121,55 @@ body {
 .hero-float-4 {
   animation: floatHeroReverse 8s ease-in-out infinite;
 }
+
+/* Mobile menu styles */
+#mobile-menu-btn {
+  cursor: pointer;
+}
+
+#mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .card-expert {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    line-height: 1.2;
+  }
+  
+  .kpi-container-modern {
+    gap: 0.5rem;
+  }
+  
+  .kpi-modern {
+    padding: 0.75rem;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  section {
+    overflow-x: hidden;
+  }
+}

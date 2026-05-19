@@ -1,0 +1,217 @@
+{
+  "hero": {
+    "headline": "Engineering Digital Solutions & Managing IT Projects",
+    "subheadline": "From design to operations of high-performance and secure digital solutions",
+    "location": "Based in Senegal, serving Africa and the world",
+    "cta": {
+      "primary": "Request a diagnostic",
+      "secondary": "Contact an expert"
+    }
+  },
+  "trust": {
+    "title": "They trust us",
+    "subtitle": "Technology startup • Missions in Africa & internationally • International standards (security, GDPR, SLA)",
+    "badges": [
+      "Technology startup",
+      "Africa & International missions",
+      "International standards",
+      "Security & GDPR",
+      "Guaranteed SLA"
+    ]
+  },
+  "why": {
+    "title": "Why IMPULCIA",
+    "subtitle": "A trusted technology partner for your digital projects",
+    "items": [
+      {
+        "title": "Cross-cutting IT & digital expertise",
+        "description": "Complete mastery of the digital solutions lifecycle, from design to operations"
+      },
+      {
+        "title": "Modular approach",
+        "description": "Build, Run, Scale, Care: solutions adapted to each stage of your transformation"
+      },
+      {
+        "title": "Innovation & performance vision",
+        "description": "Modern technologies, best practices, focus on measurable results"
+      },
+      {
+        "title": "Africa roots + international standards",
+        "description": "Understanding of local issues, alignment with global quality standards"
+      }
+    ]
+  },
+  "offers": {
+    "title": "Our custom information systems services",
+    "subtitle": "Systems engineered for your operations, not off-the-shelf SaaS resale",
+    "build": {
+      "title": "BUILD",
+      "subtitle": "Design & develop",
+      "description": "End-to-end engineering and delivery of custom information systems",
+      "items": [
+        "Custom ERP, CRM, GIS and HRIS",
+        "Executive dashboards and qualification systems",
+        "Data collection tools and business workflows",
+        "Web/mobile apps, marketplaces and POS systems",
+        "Business software and corporate websites"
+      ],
+      "cta": "Discover BUILD"
+    },
+    "run": {
+      "title": "RUN",
+      "subtitle": "Operate & secure",
+      "description": "Infrastructure, maintenance and support for service continuity",
+      "items": [
+        "Application maintenance (MCO)",
+        "Cloud hosting (shared, dedicated, scalable)",
+        "Security, backup, monitoring",
+        "Server & professional email management"
+      ],
+      "cta": "Discover RUN"
+    },
+    "scale": {
+      "title": "SCALE",
+      "subtitle": "Structure & accelerate",
+      "description": "Data, AI and automation to drive performance",
+      "items": [
+        "Data & Business Intelligence",
+        "Performance tracking tools (KPIs)",
+        "Automation & AI",
+        "Business process optimization"
+      ],
+      "cta": "Discover SCALE"
+    },
+    "care": {
+      "title": "CARE",
+      "subtitle": "Support & grow",
+      "description": "Continuous support, training and strategic advisory",
+      "items": [
+        "Support & continuous assistance",
+        "Training (GDPR, digital tools, processes)",
+        "Skills development support",
+        "Digital roadmap & strategic advisory"
+      ],
+      "cta": "Discover CARE"
+    }
+  },
+  "services": {
+    "title": "Our detailed services",
+    "subtitle": "Complete expertise for your digital transformation",
+    "items": [
+      {
+        "title": "Software development & platforms",
+        "description": "Design of custom IS platforms: ERP, CRM, GIS, HRIS, web/mobile apps and domain software"
+      },
+      {
+        "title": "Cloud solutions & hosting",
+        "description": "Shared, dedicated, cloud hosting, server and infrastructure management"
+      },
+      {
+        "title": "Digital marketing & platform management",
+        "description": "Digital platform management, community management, LinkedIn strategy"
+      },
+      {
+        "title": "Licenses & digital tools",
+        "description": "Collaboration tools, document workflows, field data collection and operational toolchains"
+      },
+      {
+        "title": "Digital transformation advisory",
+        "description": "IT audit, strategic support, digital project management"
+      }
+    ]
+  },
+  "industries": {
+    "title": "Our sectors of activity",
+    "subtitle": "Solutions adapted to each context",
+    "items": [
+      {
+        "title": "Institutions & administrations",
+        "description": "Modernization of public services, institutional platforms, process digitalization"
+      },
+      {
+        "title": "SMEs & large companies",
+        "description": "ERP, CRM, management tools, digital transformation of business processes"
+      },
+      {
+        "title": "Startups & innovative projects",
+        "description": "Technical support, MVP, scaling, investment preparation"
+      },
+      {
+        "title": "Education & training",
+        "description": "E-learning platforms, educational tools, training management"
+      },
+      {
+        "title": "Services & business platforms",
+        "description": "Sector-specific solutions, specialized platforms, performance tracking tools"
+      }
+    ]
+  },
+  "methodology": {
+    "title": "Our methodology",
+    "subtitle": "A structured and professional approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Analysis & diagnosis",
+        "description": "In-depth understanding of your needs, constraints and objectives"
+      },
+      {
+        "number": "02",
+        "title": "Design & architecture",
+        "description": "Design of adapted solutions, technical architecture, planning"
+      },
+      {
+        "number": "03",
+        "title": "Development & deployment",
+        "description": "Implementation, testing, production deployment with best practices"
+      },
+      {
+        "number": "04",
+        "title": "Operations & optimization",
+        "description": "Monitoring, maintenance, continuous performance improvement"
+      },
+      {
+        "number": "05",
+        "title": "Support & continuous evolution",
+        "description": "Long-term support, training, evolution according to your needs"
+      }
+    ]
+  },
+  "startupAct": {
+    "title": "IMPULCIA & Startup Act Senegal",
+    "subtitle": "Contributing to digitalization and innovation in Senegal",
+    "items": [
+      {
+        "title": "Contribution to digitalization",
+        "description": "Development of digital solutions for Senegalese companies and institutions"
+      },
+      {
+        "title": "Local value creation",
+        "description": "Training, skills transfer, job creation in the IT sector"
+      },
+      {
+        "title": "Innovation & employment",
+        "description": "Support for startups, innovative projects and entrepreneurship ecosystems"
+      },
+      {
+        "title": "Public-private partnerships",
+        "description": "Collaboration with institutions to modernize public services"
+      },
+      {
+        "title": "Long-term vision",
+        "description": "Long-term commitment to the development of the digital sector in Senegal"
+      }
+    ],
+    "cta": "Learn more about our commitment"
+  },
+  "cta": {
+    "title": "Let's talk about your project",
+    "subtitle": "Let's build sustainable digital solutions together",
+    "buttons": {
+      "contact": "Contact us",
+      "meeting": "Talk to an IS architect",
+      "partnership": "Become a partner"
+    }
+  }
+}
+

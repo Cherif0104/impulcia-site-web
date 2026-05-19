@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-navy: #0b1220;
+  --brand-accent: #14b8a6;
+  --brand-gold: #d4a853;
+  --page-bg: #f8fbff;
+  --page-bg-muted: #eaf2fb;
+  --panel-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-subtle: #4b5563;
+  --ring-soft: rgba(15, 23, 42, 0.12);
+}
+
+:root[data-theme='dark'] {
+  --page-bg: #0b1220;
+  --page-bg-muted: #141d2f;
+  --panel-bg: #1a2438;
+  --text-main: #e2e8f0;
+  --text-subtle: #94a3b8;
+  --ring-soft: rgba(148, 163, 184, 0.28);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-main);
+  @apply antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    @apply bg-brand-panel/80 backdrop-blur-xl border border-brand-border/60;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-teal-100 to-brand-accent bg-clip-text text-transparent;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}

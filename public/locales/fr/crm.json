@@ -1,0 +1,89 @@
+{
+  "admin": {
+    "title": "CRM IMPULCIA",
+    "login": "Connexion administrateur",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signOut": "Déconnexion",
+    "invalidPassword": "Mot de passe incorrect",
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "management": "Management general",
+      "organizations": "Organizations",
+      "workspaces": "Workspaces/Clients",
+      "requests": "Demandes",
+      "team": "Equipe & roles",
+      "recruitment": "Recrutement",
+      "leads": "Leads",
+      "engagements": "Engagements",
+      "messages": "Messages",
+      "faq": "FAQ",
+      "analytics": "Analytiques"
+    },
+    "dashboard": {
+      "welcome": "Bienvenue dans l’espace CRM",
+      "leadsCount": "Leads",
+      "messagesCount": "Messages",
+      "pageViews": "Pages vues",
+      "sessions": "Sessions"
+    },
+    "leads": {
+      "title": "Leads",
+      "name": "Nom",
+      "email": "E-mail",
+      "score": "Score",
+      "priority": "Priorité",
+      "potential": "Potentiel",
+      "urgency": "Urgence",
+      "phone": "Téléphone",
+      "status": "Statut",
+      "date": "Date",
+      "detail": "Détail du lead",
+      "activity": "Activité",
+      "domain": "Secteur",
+      "address": "Adresse",
+      "message": "Message",
+      "scoringDetails": "Détail scoring",
+      "whatsapp": "WhatsApp cliqué",
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "faq": {
+      "title": "FAQ",
+      "add": "Ajouter",
+      "question": "Question",
+      "answer": "Réponse",
+      "locale": "Langue",
+      "order": "Ordre",
+      "published": "Publié",
+      "save": "Enregistrer",
+      "delete": "Supprimer"
+    },
+    "messages": {
+      "title": "Boîte de messages",
+      "channel": "Canal",
+      "body": "Contenu",
+      "direction": "Direction",
+      "date": "Date"
+    },
+    "engagements": {
+      "title": "Engagements",
+      "source": "Source",
+      "action": "Action",
+      "filter": "Filtrer",
+      "empty": "Aucun engagement trouvé."
+    },
+    "analytics": {
+      "title": "Analytiques",
+      "placeholder": "Statistiques agrégées — Phase 2 : graphiques et filtres par période.",
+      "byPage": "Par page"
+    },
+    "status": {
+      "new": "Nouveau",
+      "contacted": "Contacté",
+      "qualified": "Qualifié",
+      "won": "Gagné",
+      "lost": "Perdu"
+    }
+  }
+}

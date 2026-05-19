@@ -1,0 +1,77 @@
+{
+  "origin": {
+    "title": "Une vision née de l'expérience terrain",
+    "text": "IMPULCIA est née d'un constat simple : en Afrique, et particulièrement au Sénégal, de nombreuses entreprises et institutions disposent d'ambitions numériques fortes, mais peinent à trouver des partenaires technologiques capables de les accompagner de bout en bout — de la conception à l'exploitation, de l'idée au produit, du produit à la croissance.",
+    "founderNote": "Notre fondateur a évolué dans l'écosystème IT international et africain. Il a vu des projets prometteurs échouer faute d'une vision technique claire, des solutions coûteuses être déployées sans tenir compte des réalités locales, et des organisations perdre du temps et de l'argent à cause d'un manque de suivi et de maintenance.",
+    "response": "IMPULCIA est la réponse à ces défis : une entreprise qui combine expertise technique internationale et compréhension profonde des enjeux africains, pour construire des solutions qui fonctionnent vraiment, ici et maintenant."
+  },
+  "vision": {
+    "title": "L'Afrique peut être leader de l'innovation numérique",
+    "text": "Nous croyons que l'Afrique n'est pas seulement un marché de consommation technologique, mais un terreau d'innovation et de création de solutions. Les défis spécifiques du continent — contraintes budgétaires, diversité des contextes, besoins de scalabilité rapide — sont aussi des opportunités pour inventer des approches nouvelles.",
+    "commitments": [
+      {
+        "title": "Co-construire avec les acteurs locaux",
+        "description": "Nous ne venons pas imposer des modèles venus d'ailleurs, mais adapter et créer des solutions avec nos partenaires sénégalais, africains et internationaux."
+      },
+      {
+        "title": "Former et transférer les compétences",
+        "description": "Chaque projet est l'occasion de monter en compétences les équipes locales, pour que la maîtrise technologique reste dans les mains de ceux qui l'utilisent au quotidien."
+      },
+      {
+        "title": "Penser long terme",
+        "description": "Nous ne livrons pas des produits puis disparaissons. Nous restons partenaires pour l'évolution, la maintenance, l'amélioration continue."
+      },
+      {
+        "title": "Rester connectés au monde",
+        "description": "Basés au Sénégal, ancrés en Afrique, nous restons en veille permanente sur les meilleures pratiques internationales, pour que nos solutions soient locales par la compréhension, globales par la qualité."
+      }
+    ]
+  },
+  "ambition": {
+    "title": "Devenir un acteur de référence, au Sénégal, en Afrique et dans le monde",
+    "text": "Notre ambition n'est pas de devenir la plus grande ESN d'Afrique, mais la plus utile et la plus fiable pour ceux qui nous font confiance.",
+    "recognition": [
+      "Le partenaire technologique de confiance des entreprises qui veulent digitaliser sans perdre leur âme ni leur budget.",
+      "L'allié des institutions qui cherchent à moderniser leurs services publics avec des solutions durables et sécurisées.",
+      "Le soutien des startups qui ont besoin d'une base technique solide pour convaincre investisseurs et clients.",
+      "Un pont entre l'Afrique et le monde : montrer que l'excellence technologique peut naître et grandir en Afrique, tout en restant connectée aux standards internationaux."
+    ]
+  },
+  "values": {
+    "title": "Ce qui nous guide au quotidien",
+    "items": [
+      {
+        "title": "Excellence technique",
+        "description": "Nous ne livrons que ce qui fonctionne vraiment, testé, sécurisé et documenté."
+      },
+      {
+        "title": "Transparence",
+        "description": "Pas de jargon inutile, pas de surprises sur les coûts ou les délais. Nous communiquons clairement, dès le début et tout au long du projet."
+      },
+      {
+        "title": "Pragmatisme",
+        "description": "Nous préférons une solution simple qui marche à une solution complexe qui impressionne mais ne résout rien."
+      },
+      {
+        "title": "Engagement long terme",
+        "description": "IMPULCIA n'est pas une entreprise de \"one-shot\". Nous construisons des relations de confiance qui durent."
+      },
+      {
+        "title": "Innovation responsable",
+        "description": "Nous innovons, mais toujours avec un objectif d'impact réel et de durabilité."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Rejoignez-nous dans cette aventure",
+    "text": "Si vous partagez notre vision — celle d'une Afrique qui innove, qui crée, qui exporte ses solutions numériques — alors parlons-en.",
+    "audiences": [
+      "Une entreprise qui veut transformer ses processus",
+      "Une institution qui cherche à moderniser ses services",
+      "Une startup qui veut structurer son produit",
+      "Un partenaire qui veut co-construire des projets ambitieux"
+    ],
+    "closing": "Ensemble, construisons l'Afrique numérique de demain."
+  }
+}
+

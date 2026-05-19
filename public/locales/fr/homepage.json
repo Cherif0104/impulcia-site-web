@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Build. Run. Scale. Care.",
+    "subtitle": "Ingénierie des solutions informatiques & management de projets numériques",
+    "description": "Nous concevons, déployons et pilotons des solutions digitales fiables, sécurisées et scalables pour les entreprises, institutions et organisations au Sénégal, en Afrique et dans le monde."
+  },
+  "offers": {
+    "title": "Nos offres modulaires",
+    "build": {
+      "title": "BUILD",
+      "description": "Concevoir & développer",
+      "items": [
+        "Produits SaaS, ERP, CRM, SIRH",
+        "Applications web & mobile",
+        "Plateformes métiers",
+        "Outils de suivi de performance"
+      ]
+    },
+    "run": {
+      "title": "RUN",
+      "description": "Opérer & sécuriser",
+      "items": [
+        "Maintenance, support 24/7, MCO",
+        "SRE, SecOps, FinOps",
+        "Gestion des infrastructures",
+        "Hébergement cloud"
+      ]
+    },
+    "scale": {
+      "title": "SCALE",
+      "description": "Structurer & accélérer",
+      "items": [
+        "Data, IA, automatisation",
+        "Outils analytiques",
+        "Suivi de performance",
+        "Cloud & scalabilité"
+      ]
+    },
+    "care": {
+      "title": "CARE",
+      "description": "Accompagner & faire grandir",
+      "items": [
+        "Support continu",
+        "Roadmap produit",
+        "Formation",
+        "Accompagnement stratégique"
+      ]
+    }
+  },
+  "why": {
+    "title": "Pourquoi IMPULCIA",
+    "items": [
+      {
+        "title": "Expertise technique",
+        "description": "Une maîtrise complète des technologies modernes et des meilleures pratiques"
+      },
+      {
+        "title": "Approche orientée résultats",
+        "description": "Des solutions alignées sur vos objectifs métiers et votre vision"
+      },
+      {
+        "title": "Sécurité & conformité",
+        "description": "Respect des standards de sécurité et de protection des données"
+      },
+      {
+        "title": "Vision long terme",
+        "description": "Un partenariat durable pour l'évolution et la croissance de vos solutions"
+      }
+    ]
+  }
+}
+

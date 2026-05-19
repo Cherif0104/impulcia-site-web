@@ -1,0 +1,40 @@
+{
+  "cookie": {
+    "title": "Respect de votre vie privée",
+    "description": "Nous utilisons des cookies pour assurer le fonctionnement du site et, avec votre accord, pour mesurer l’audience et améliorer nos services. Conformément au RGPD, vous choisissez les catégories acceptées.",
+    "essential": "Essentiels",
+    "essentialDesc": "Nécessaires au fonctionnement du site (session, sécurité).",
+    "analytics": "Analytiques",
+    "analyticsDesc": "Statistiques anonymes de navigation (pages, langue). Aucune donnée personnelle sans formulaire.",
+    "marketing": "Marketing",
+    "marketingDesc": "Personnalisation et campagnes (désactivé par défaut).",
+    "acceptAll": "Tout accepter",
+    "rejectNonEssential": "Refuser le non essentiel",
+    "customize": "Personnaliser",
+    "save": "Enregistrer mes choix",
+    "alwaysOn": "Toujours actif",
+    "policyLink": "Politique de confidentialité"
+  },
+  "form": {
+    "title": "Demander un diagnostic",
+    "subtitle": "Partagez vos enjeux SI — nos architectes vous recontactent sous 48 h.",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "E-mail professionnel",
+    "phone": "Téléphone",
+    "address": "Adresse / ville",
+    "activity": "Activité",
+    "domain": "Secteur / domaine",
+    "message": "Message",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours…",
+    "success": "Merci ! Votre demande a bien été enregistrée.",
+    "error": "Une erreur est survenue. Réessayez ou contactez-nous sur WhatsApp.",
+    "whatsapp": "Discuter sur WhatsApp",
+    "whatsappPrefill": "Bonjour IMPULCIA, je souhaite un cadrage projet pour un systeme d'information sur mesure.",
+    "required": "Champ obligatoire",
+    "consentNotice": "En envoyant ce formulaire, vous acceptez que nous traitions vos données pour vous recontacter (RGPD).",
+    "checklistOptIn": "Je souhaite recevoir la checklist Transformation SI Afrique francophone.",
+    "downloadChecklist": "Télécharger la checklist (gratuit)"
+  }
+}

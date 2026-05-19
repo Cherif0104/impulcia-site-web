@@ -1,0 +1,89 @@
+{
+  "admin": {
+    "title": "IMPULCIA CRM",
+    "login": "Administrator login",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "invalidPassword": "Invalid password",
+    "nav": {
+      "dashboard": "Dashboard",
+      "management": "General management",
+      "organizations": "Organizations",
+      "workspaces": "Workspaces/Clients",
+      "requests": "Requests",
+      "team": "Team & roles",
+      "recruitment": "Recruitment",
+      "leads": "Leads",
+      "engagements": "Engagements",
+      "messages": "Messages",
+      "faq": "FAQ",
+      "analytics": "Analytics"
+    },
+    "dashboard": {
+      "welcome": "Welcome to the CRM workspace",
+      "leadsCount": "Leads",
+      "messagesCount": "Messages",
+      "pageViews": "Page views",
+      "sessions": "Sessions"
+    },
+    "leads": {
+      "title": "Leads",
+      "name": "Name",
+      "email": "Email",
+      "score": "Score",
+      "priority": "Priority",
+      "potential": "Potential",
+      "urgency": "Urgency",
+      "phone": "Phone",
+      "status": "Status",
+      "date": "Date",
+      "detail": "Lead detail",
+      "activity": "Activity",
+      "domain": "Sector",
+      "address": "Address",
+      "message": "Message",
+      "scoringDetails": "Scoring detail",
+      "whatsapp": "WhatsApp clicked",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "faq": {
+      "title": "FAQ",
+      "add": "Add",
+      "question": "Question",
+      "answer": "Answer",
+      "locale": "Locale",
+      "order": "Order",
+      "published": "Published",
+      "save": "Save",
+      "delete": "Delete"
+    },
+    "messages": {
+      "title": "Message inbox",
+      "channel": "Channel",
+      "body": "Content",
+      "direction": "Direction",
+      "date": "Date"
+    },
+    "engagements": {
+      "title": "Engagements",
+      "source": "Source",
+      "action": "Action",
+      "filter": "Filter",
+      "empty": "No engagement found."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "placeholder": "Aggregated stats — Phase 2: charts and date filters.",
+      "byPage": "By page"
+    },
+    "status": {
+      "new": "New",
+      "contacted": "Contacted",
+      "qualified": "Qualified",
+      "won": "Won",
+      "lost": "Lost"
+    }
+  }
+}

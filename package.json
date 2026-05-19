@@ -1,13 +1,33 @@
 {
-  "name": "impulcia-afrique",
+  "name": "impulcia-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node node_modules/vite/bin/vite.js",
-    "build": "node node_modules/vite/bin/vite.js build",
-    "preview": "node node_modules/vite/bin/vite.js preview"
+    "dev": "node ./node_modules/next/dist/bin/next dev -p 4174 --webpack",
+    "dev:turbopack": "node ./node_modules/next/dist/bin/next dev -p 4174",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start -p 4174",
+    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .ts,.tsx --max-warnings=0",
+    "typecheck": "node ./node_modules/typescript/bin/tsc --noEmit",
+    "health:check": "node ./scripts/health-check.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.0",
+    "framer-motion": "^10.16.0",
+    "next": "^16.1.1",
+    "next-intl": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^5.4.0"
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
   }
 }

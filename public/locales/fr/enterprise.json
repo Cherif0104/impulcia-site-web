@@ -1,0 +1,260 @@
+{
+  "hero": {
+    "badge": "Digital Engineering & Enterprise Solutions",
+    "title": "Nous concevons et déployons des systemes d'information sur mesure",
+    "subtitle": "IMPULCIA AFRIQUE accompagne vos equipes de bout en bout: cadrage, architecture, developpement, integration, deploiement et evolution continue.",
+    "tags": "ERP • CRM • SIG • SIRH • Dashboards • Qualification • Collecte de données • Apps web/mobile • Marketplaces • Caisse • Logiciels metiers • Sites corporate",
+    "cta": {
+      "solutions": "Demander un diagnostic",
+      "portfolio": "Voir nos réalisations",
+      "demo": "Parler a un architecte SI"
+    }
+  },
+  "impact": {
+    "items": [
+      { "value": "10+", "label": "Secteurs couverts" },
+      { "value": "Multi", "label": "Pays & entités" },
+      { "value": "5", "label": "Produits & plateformes" },
+      { "value": "360°", "label": "Transformation digitale" }
+    ]
+  },
+  "about": {
+    "eyebrow": "Qui est IMPULCIA",
+    "title": "Une societe d'ingenierie des systemes d'information",
+    "body": "IMPULCIA AFRIQUE conçoit, cree et developpe des solutions digitales sur mesure pour les entreprises, institutions et organisations: de la strategie SI a la mise en production.",
+    "points": [
+      "Ingénierie digitale & systèmes d'information",
+      "Conception et deploiement de SI de bout en bout",
+      "Expertise multi-pays : Sénégal, Mauritanie, Maroc, Afrique de l'Ouest",
+      "PMO, gouvernance et architectures enterprise"
+    ]
+  },
+  "products": {
+    "eyebrow": "Nos offres SI sur mesure",
+    "title": "Des systemes alignes sur vos objectifs metiers",
+    "subtitle": "ERP, CRM, SIG, SIRH, applications web/mobile, marketplaces, systemes de caisse, logiciels metiers et sites corporate.",
+    "items": [
+      {
+        "id": "coya",
+        "name": "COYA ERP",
+        "tagline": "ERP nouvelle génération",
+        "description": "Gouvernance, finance, RH, logistique, projets, GED et reporting unifié pour organisations multi-entités.",
+        "features": ["Finance", "RH", "Logistique", "GED", "Projets", "Reporting"],
+        "flagship": true
+      },
+      {
+        "id": "sentrajet",
+        "name": "SenTrajet",
+        "tagline": "Mobilité & transport intelligent",
+        "description": "Géolocalisation, gestion des trajets, mobilité urbaine et suivi opérationnel en temps réel.",
+        "features": ["Géolocalisation", "Trajets", "Mobilité urbaine", "Suivi"]
+      },
+      {
+        "id": "mbourake",
+        "name": "Mbouraké",
+        "tagline": "Services locaux & communauté",
+        "description": "Plateforme communautaire connectant services, utilisateurs et acteurs locaux.",
+        "features": ["Marketplace", "Communauté", "Services", "Mobile"]
+      },
+      {
+        "id": "patrimo",
+        "name": "Patrimo",
+        "tagline": "Immobilier & patrimoine",
+        "description": "Gestion immobilière, patrimoine, baux, maintenance et reporting patrimonial.",
+        "features": ["Biens", "Baux", "Maintenance", "Reporting"]
+      },
+      {
+        "id": "sunugest",
+        "name": "SunuGest",
+        "tagline": "Cloud & systèmes métiers",
+        "description": "Hébergement cloud, gestion documentaire et outils métiers intégrés.",
+        "features": ["Cloud", "GED", "Workflows", "Logiciels métiers"]
+      }
+    ]
+  },
+  "coya": {
+    "eyebrow": "Solution de reference",
+    "title": "COYA ERP",
+    "subtitle": "Le flagship IMPULCIA — système d'exploitation organisationnel pour l'Afrique.",
+    "pillars": [
+      { "title": "Architecture modulaire", "description": "Déployez et étendez sans rupture." },
+      { "title": "Multi-entités & multi-pays", "description": "Consolidation, devises et périmètres d'accès." },
+      { "title": "Workflows & validations", "description": "Circuits d'approbation et conformité." },
+      { "title": "Analytics & IA", "description": "KPI temps réel et aide à la décision." }
+    ],
+    "capabilities": ["Finance", "RH", "Logistique", "Projets", "GED", "Parc auto", "Achats", "Reporting"]
+  },
+  "modules": {
+    "eyebrow": "Modules COYA",
+    "title": "Une plateforme, tous vos métiers",
+    "subtitle": "Modules interconnectés pour structurer vos opérations.",
+    "tabs": [
+      { "id": "finance", "label": "Finance", "items": ["Budgets", "Dépenses", "Validations", "Comptabilité", "Reporting"] },
+      { "id": "logistics", "label": "Logistique", "items": ["Achats", "Stocks", "Fournisseurs", "Approvisionnements", "Traçabilité"] },
+      { "id": "fleet", "label": "Parc auto", "items": ["Véhicules", "Maintenance", "Chauffeurs", "Carburant", "Missions"] },
+      { "id": "hr", "label": "RH", "items": ["Employés", "Contrats", "Présences", "Évaluations", "Paie"] },
+      { "id": "projects", "label": "Projets", "items": ["Planification", "Budgets", "Livrables", "Équipes", "Bailleurs"] },
+      { "id": "ged", "label": "GED", "items": ["Archivage", "Versions", "Recherche", "Droits", "Conformité"] }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Nos expertises",
+    "title": "Domaines d'intervention",
+    "subtitle": "De l'audit à l'exploitation — une offre enterprise complète.",
+    "items": [
+      { "title": "Transformation digitale", "description": "Stratégie, conduite du changement et déploiement." },
+      { "title": "ERP & systèmes métiers", "description": "Conception, intégration et exploitation de SI." },
+      { "title": "Cloud & infrastructure", "description": "Architectures scalables et haute disponibilité." },
+      { "title": "Cybersécurité", "description": "Protection, audit et conformité." },
+      { "title": "Applications mobiles", "description": "Apps natives et cross-platform." },
+      { "title": "Intelligence artificielle", "description": "Automatisation et aide à la décision." },
+      { "title": "Business Intelligence", "description": "Dashboards, ETL et reporting." },
+      { "title": "Gouvernance digitale", "description": "Traçabilité et contrôle interne." },
+      { "title": "Data & Analytics", "description": "Valorisation des données organisationnelles." },
+      { "title": "Solutions institutionnelles", "description": "ONG, bailleurs et secteur public." }
+    ]
+  },
+  "sectors": {
+    "eyebrow": "Secteurs",
+    "title": "Nous comprenons vos industries",
+    "items": ["ONG & programmes", "Gouvernements", "Transport & aviation", "Éducation", "Santé", "Logistique", "Immobilier", "Énergie", "Finance", "Agriculture", "PME", "Institutions"]
+  },
+  "technologies": {
+    "eyebrow": "Technologies",
+    "title": "Stack technique de confiance",
+    "items": ["React", "Next.js", "Node.js", "Python", "Laravel", "PostgreSQL", "Docker", "AWS", "Azure", "GCP", "Kubernetes", "Flutter", "Supabase", "Power BI", "Odoo", "IA / APIs"]
+  },
+  "partners": {
+    "eyebrow": "Partenaires & clients",
+    "title": "Ils nous font confiance",
+    "subtitle": "Des références institutionnelles et régionales qui attestent de notre crédibilité."
+  },
+  "challenges": {
+    "eyebrow": "Défis & enjeux",
+    "title": "Les défis numériques africains",
+    "subtitle": "IMPULCIA répond aux réalités du terrain avec des systèmes adaptés, intégrés et gouvernés.",
+    "problems": [
+      "Fragmentation des outils et silos de données",
+      "Faible digitalisation des processus métiers",
+      "Manque d'interopérabilité entre systèmes",
+      "Absence de gouvernance et traçabilité",
+      "Dépendance aux solutions non adaptées au contexte local",
+      "Défis logistiques et opérationnels spécifiques"
+    ],
+    "responses": [
+      "Plateformes intégrées propriétaires (COYA ERP et écosystème)",
+      "Architectures multi-entités et multi-pays",
+      "Workflows et validations alignés sur vos instances",
+      "Accompagnement PMO et transformation organisationnelle",
+      "Solutions cloud, mobile et data pensées pour l'Afrique"
+    ]
+  },
+  "methodology": {
+    "eyebrow": "Approche",
+    "title": "Méthodologie IMPULCIA",
+    "steps": [
+      { "title": "Audit & diagnostic", "description": "Compréhension terrain et cartographie SI." },
+      { "title": "Architecture", "description": "Conception systémique et choix technologiques." },
+      { "title": "Conception & développement", "description": "Produits sur mesure et déploiement agile." },
+      { "title": "Déploiement & formation", "description": "Mise en production et adoption utilisateurs." },
+      { "title": "Support & évolution", "description": "Maintenance, SLA et amélioration continue." }
+    ]
+  },
+  "demo": {
+    "eyebrow": "Cadrage & audit SI",
+    "title": "Structurons votre trajectoire digitale",
+    "subtitle": "Audit de l'existant, priorisation metier et feuille de route de deploiement adaptee a votre contexte.",
+    "cta": "Lancer un audit",
+    "features": ["Analyse des processus", "Diagnostic SI", "Roadmap 90 jours", "Plan de deploiement cible"]
+  },
+  "caseStudies": {
+    "eyebrow": "Cas clients",
+    "title": "Études de cas orientées impact",
+    "subtitle": "Contexte, problème, solution et KPI business pour démontrer la valeur terrain.",
+    "items": [
+      {
+        "id": "institution-erp",
+        "sector": "Institution publique",
+        "context": "Hétérogénéité des processus et faible visibilité multi-entités.",
+        "problem": "Délais de validation longs et reporting non consolidé.",
+        "solution": "Déploiement COYA ERP avec workflows hiérarchiques et dashboard décisionnel.",
+        "impact": "Cycle de validation réduit de 38% et visibilité consolidée en temps réel."
+      },
+      {
+        "id": "transport-ops",
+        "sector": "Transport & logistique",
+        "context": "Pilotage de flotte répartie sur plusieurs zones.",
+        "problem": "Suivi partiel des trajets, incidents et coûts opérationnels.",
+        "solution": "Mise en place SenTrajet avec suivi 24/7, alertes et analytics d’exploitation.",
+        "impact": "Réduction de 22% des écarts de trajets et meilleure ponctualité opérationnelle."
+      },
+      {
+        "id": "ngo-governance",
+        "sector": "ONG & programmes",
+        "context": "Multiples projets financés avec exigences de conformité fortes.",
+        "problem": "Difficulté à relier dépenses, livrables et indicateurs bailleurs.",
+        "solution": "Intégration COYA + SunuGest pour gouvernance projet, GED et suivi KPI.",
+        "impact": "Fiabilité des rapports renforcée et temps de consolidation divisé par 2."
+      }
+    ]
+  },
+  "sectorPaths": {
+    "eyebrow": "Parcours par secteur",
+    "title": "Entrez par votre réalité métier",
+    "items": [
+      {
+        "id": "ngo",
+        "name": "ONG & bailleurs",
+        "description": "Pilotage programmes, conformité, reporting impacts."
+      },
+      {
+        "id": "public",
+        "name": "Institutions publiques",
+        "description": "Gouvernance, workflows administratifs, transparence décisionnelle."
+      },
+      {
+        "id": "transport",
+        "name": "Transport & logistique",
+        "description": "Suivi des opérations terrain, flottes et performance réseau."
+      },
+      {
+        "id": "real-estate",
+        "name": "Immobilier & patrimoine",
+        "description": "Gestion d’actifs, baux, maintenance et contrôle budgétaire."
+      }
+    ]
+  },
+  "aiCapabilities": {
+    "eyebrow": "Offres IA métier",
+    "title": "Capacités IA packagées par cas d’usage",
+    "subtitle": "Des offres business concrètes, connectées à vos processus et KPI.",
+    "items": [
+      {
+        "name": "COYA Predict",
+        "description": "Prévision budgétaire et détection des écarts de dépenses pour directions financières.",
+        "product": "COYA ERP"
+      },
+      {
+        "name": "SenTrajet Guardian",
+        "description": "Détection d’anomalies trajets, retards et incidents opérationnels en mobilité.",
+        "product": "SenTrajet"
+      },
+      {
+        "name": "Patrimo Advisor",
+        "description": "Recommandations de maintenance prédictive et optimisation de portefeuille d’actifs.",
+        "product": "Patrimo"
+      },
+      {
+        "name": "SunuGest Copilot",
+        "description": "Automatisation documentaire, extraction de données et workflows intelligents.",
+        "product": "SunuGest"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Construisons votre infrastructure numérique",
+    "subtitle": "Échangez avec nos architectes système et découvrez comment IMPULCIA transforme votre organisation.",
+    "primary": "Lancer un cadrage SI",
+    "secondary": "Contacter un expert"
+  }
+}

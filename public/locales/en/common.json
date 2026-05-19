@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "IMPULCIA AFRIQUE",
+    "tagline": "Digital Engineering & Enterprise Solutions",
+    "subtitle": "Custom information systems design and development for Africa.",
+    "location": "Dakar, Senegal — Africa & International"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "IS Solutions",
+    "expertise": "Expertise",
+    "technologies": "Technologies",
+    "serviceOffers": "Service offerings",
+    "partners": "Partners",
+    "contact": "Contact"
+  },
+  "cta": {
+    "talkToExpert": "Talk to an IS architect",
+    "discoverSolutions": "Our solutions",
+    "discussProject": "Request a diagnostic",
+    "requestDiagnostic": "Request a diagnostic",
+    "contactExpert": "Contact an expert",
+    "getInTouch": "Contact us",
+    "scheduleCall": "Launch an audit"
+  },
+  "footer": {
+    "description": "African engineering company for custom information systems design, development and deployment.",
+    "quickLinks": "Navigation",
+    "product": "Products",
+    "company": "Company",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "docs": "Cookies",
+    "support": "Support",
+    "copyright": "© 2026 IMPULCIA AFRIQUE. All rights reserved.",
+    "madeIn": "Built in Africa, to world-class standards"
+  }
+}

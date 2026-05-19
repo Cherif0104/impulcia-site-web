@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Build. Run. Scale. Care.",
+    "subtitle": "Engineering Digital Solutions & Managing IT Projects",
+    "description": "We design, deploy and operate reliable, secure and scalable digital solutions for companies, institutions and organizations in Senegal, across Africa and globally."
+  },
+  "offers": {
+    "title": "Our modular offerings",
+    "build": {
+      "title": "BUILD",
+      "description": "Design & develop",
+      "items": [
+        "SaaS products, ERP, CRM, HRIS",
+        "Web & mobile applications",
+        "Business platforms",
+        "Performance tracking tools"
+      ]
+    },
+    "run": {
+      "title": "RUN",
+      "description": "Operate & secure",
+      "items": [
+        "Maintenance, 24/7 support, MCO",
+        "SRE, SecOps, FinOps",
+        "Infrastructure management",
+        "Cloud hosting"
+      ]
+    },
+    "scale": {
+      "title": "SCALE",
+      "description": "Structure & accelerate",
+      "items": [
+        "Data, AI, automation",
+        "Analytics tools",
+        "Performance monitoring",
+        "Cloud & scalability"
+      ]
+    },
+    "care": {
+      "title": "CARE",
+      "description": "Support & grow",
+      "items": [
+        "Continuous support",
+        "Product roadmap",
+        "Training",
+        "Strategic advisory"
+      ]
+    }
+  },
+  "why": {
+    "title": "Why IMPULCIA",
+    "items": [
+      {
+        "title": "Technical expertise",
+        "description": "Complete mastery of modern technologies and best practices"
+      },
+      {
+        "title": "Results-driven approach",
+        "description": "Solutions aligned with your business objectives and vision"
+      },
+      {
+        "title": "Security & compliance",
+        "description": "Adherence to security standards and data protection"
+      },
+      {
+        "title": "Long-term vision",
+        "description": "A lasting partnership for the evolution and growth of your solutions"
+      }
+    ]
+  }
+}
+

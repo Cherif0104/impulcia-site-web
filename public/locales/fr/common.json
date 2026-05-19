@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "IMPULCIA AFRIQUE",
+    "tagline": "Digital Engineering & Enterprise Solutions",
+    "subtitle": "Conception et developpement de systemes d'information sur mesure pour l'Afrique.",
+    "location": "Dakar, Sénégal — Afrique & International"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Solutions SI",
+    "expertise": "Expertises",
+    "technologies": "Technologies",
+    "serviceOffers": "Nos offres de services",
+    "partners": "Partenaires",
+    "contact": "Contact"
+  },
+  "cta": {
+    "talkToExpert": "Parler a un architecte SI",
+    "discoverSolutions": "Nos solutions",
+    "discussProject": "Demander un diagnostic",
+    "requestDiagnostic": "Demander un diagnostic",
+    "contactExpert": "Contacter un expert",
+    "getInTouch": "Nous contacter",
+    "scheduleCall": "Lancer un audit"
+  },
+  "footer": {
+    "description": "Societe d'ingenierie digitale africaine — conception, developpement et deploiement de SI sur mesure.",
+    "quickLinks": "Navigation",
+    "product": "Produits",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "docs": "Cookies",
+    "support": "Support",
+    "copyright": "© 2026 IMPULCIA AFRIQUE. Tous droits réservés.",
+    "madeIn": "Conçu en Afrique, aux standards mondiaux"
+  }
+}

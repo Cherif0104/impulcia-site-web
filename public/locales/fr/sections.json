@@ -1,0 +1,218 @@
+{
+  "hero": {
+    "headline": "Ingénierie des solutions informatiques & management de projets numériques",
+    "subheadline": "De la conception à l'exploitation de solutions digitales performantes et sécurisées",
+    "location": "Au Sénégal, en Afrique et dans le monde",
+    "cta": {
+      "primary": "Demander un diagnostic",
+      "secondary": "Contacter un expert"
+    }
+  },
+  "trust": {
+    "title": "Ils nous font confiance",
+    "subtitle": "Startup technologique • Missions en Afrique & à l'international • Standards internationaux (sécurité, RGPD, SLA)",
+    "badges": [
+      "Startup technologique",
+      "Missions Afrique & International",
+      "Standards internationaux",
+      "Sécurité & RGPD",
+      "SLA garantis"
+    ]
+  },
+  "why": {
+    "title": "Pourquoi IMPULCIA",
+    "subtitle": "Un partenaire technologique de confiance pour vos projets numériques",
+    "items": [
+      {
+        "title": "Expertise transverse IT & digital",
+        "description": "Maîtrise complète du cycle de vie des solutions numériques, de la conception à l'exploitation"
+      },
+      {
+        "title": "Approche modulaire",
+        "description": "Build, Run, Scale, Care : des solutions adaptées à chaque étape de votre transformation"
+      },
+      {
+        "title": "Vision innovation & performance",
+        "description": "Technologies modernes, meilleures pratiques, focus sur les résultats mesurables"
+      },
+      {
+        "title": "Ancrage Afrique + standards internationaux",
+        "description": "Compréhension des enjeux locaux, alignement avec les standards mondiaux de qualité"
+      }
+    ]
+  },
+  "offers": {
+    "title": "Nos offres SI sur mesure",
+    "subtitle": "Des systèmes conçus pour vos réalités métiers, pas des SaaS prêts à l’emploi",
+    "build": {
+      "title": "BUILD",
+      "subtitle": "Concevoir & développer",
+      "description": "Ingénierie et développement de systèmes d'information sur mesure",
+      "items": [
+        "ERP, CRM, SIG et SIRH sur mesure",
+        "Dashboards de pilotage et systèmes de qualification",
+        "Outils de collecte de données et workflows métier",
+        "ERP / CRM / SIRH",
+        "Applications web/mobile, marketplaces et caisses",
+        "Logiciels métiers et sites corporate institutionnels"
+      ],
+      "cta": "Découvrir BUILD"
+    },
+    "run": {
+      "title": "RUN",
+      "subtitle": "Opérer & sécuriser",
+      "description": "Infrastructure, maintenance et support pour la continuité de service",
+      "items": [
+        "Maintenance applicative (MCO)",
+        "Hébergement cloud (mutualisé, dédié, scalable)",
+        "Sécurité, sauvegarde, monitoring",
+        "Gestion serveurs & emails professionnels"
+      ],
+      "cta": "Découvrir RUN"
+    },
+    "scale": {
+      "title": "SCALE",
+      "subtitle": "Structurer & accélérer",
+      "description": "Data, IA et automatisation pour piloter la performance",
+      "items": [
+        "Data & Business Intelligence",
+        "Outils de suivi de performance (KPI)",
+        "Automatisation & IA",
+        "Optimisation des processus métiers"
+      ],
+      "cta": "Découvrir SCALE"
+    },
+    "care": {
+      "title": "CARE",
+      "subtitle": "Accompagner & faire grandir",
+      "description": "Support continu, formation et conseil stratégique",
+      "items": [
+        "Support & assistance continue",
+        "Formation (RGPD, outils digitaux, process)",
+        "Accompagnement à la montée en compétences",
+        "Roadmap digitale & conseil stratégique"
+      ],
+      "cta": "Découvrir CARE"
+    }
+  },
+  "services": {
+    "title": "Nos services détaillés",
+    "subtitle": "Une expertise complète pour votre transformation digitale",
+    "items": [
+      {
+        "title": "Développement logiciel & plateformes",
+        "description": "Conception de SI sur mesure: ERP, CRM, SIG, SIRH, apps web/mobile et plateformes métiers"
+      },
+      {
+        "title": "Solutions cloud & hébergement",
+        "description": "Hébergement mutualisé, dédié, cloud, gestion de serveurs et infrastructures"
+      },
+      {
+        "title": "Marketing digital & gestion de plateformes",
+        "description": "Gestion de plateformes digitales, community management, stratégie LinkedIn"
+      },
+      {
+        "title": "Licences & outils digitaux",
+        "description": "Outils de collaboration, gestion documentaire, collecte de données et environnements d'exploitation"
+      },
+      {
+        "title": "Conseil en transformation digitale",
+        "description": "Audit IT, accompagnement stratégique, pilotage de projets numériques"
+      }
+    ]
+  },
+  "industries": {
+    "title": "Nos secteurs d'intervention",
+    "subtitle": "Des solutions adaptées à chaque contexte",
+    "items": [
+      {
+        "title": "Institutions & administrations",
+        "description": "Modernisation des services publics, plateformes institutionnelles, digitalisation des processus"
+      },
+      {
+        "title": "PME & grandes entreprises",
+        "description": "ERP, CRM, outils de gestion, transformation digitale des processus métiers"
+      },
+      {
+        "title": "Startups & projets innovants",
+        "description": "Accompagnement technique, MVP, scaling, préparation aux investissements"
+      },
+      {
+        "title": "Éducation & formation",
+        "description": "Plateformes e-learning, outils pédagogiques, gestion de formations"
+      },
+      {
+        "title": "Services & plateformes métiers",
+        "description": "Solutions sectorielles, plateformes spécialisées, outils de suivi de performance"
+      }
+    ]
+  },
+  "methodology": {
+    "title": "Notre méthodologie",
+    "subtitle": "Une approche structurée et professionnelle",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Analyse & diagnostic",
+        "description": "Compréhension approfondie de vos besoins, contraintes et objectifs"
+      },
+      {
+        "number": "02",
+        "title": "Conception & architecture",
+        "description": "Design de solutions adaptées, architecture technique, planification"
+      },
+      {
+        "number": "03",
+        "title": "Développement & déploiement",
+        "description": "Implémentation, tests, mise en production avec les meilleures pratiques"
+      },
+      {
+        "number": "04",
+        "title": "Exploitation & optimisation",
+        "description": "Monitoring, maintenance, amélioration continue des performances"
+      },
+      {
+        "number": "05",
+        "title": "Support & évolution continue",
+        "description": "Accompagnement long terme, formation, évolution selon vos besoins"
+      }
+    ]
+  },
+  "startupAct": {
+    "title": "IMPULCIA & Startup Act Sénégal",
+    "subtitle": "Contribuer à la digitalisation et à l'innovation au Sénégal",
+    "items": [
+      {
+        "title": "Contribution à la digitalisation",
+        "description": "Développement de solutions numériques pour les entreprises et institutions sénégalaises"
+      },
+      {
+        "title": "Création de valeur locale",
+        "description": "Formation, transfert de compétences, création d'emplois dans le secteur IT"
+      },
+      {
+        "title": "Innovation & emploi",
+        "description": "Soutien aux startups, projets innovants et écosystèmes d'entrepreneuriat"
+      },
+      {
+        "title": "Partenariats public-privé",
+        "description": "Collaboration avec les institutions pour moderniser les services publics"
+      },
+      {
+        "title": "Vision long terme",
+        "description": "Engagement durable pour le développement du secteur numérique au Sénégal"
+      }
+    ],
+    "cta": "En savoir plus sur notre engagement"
+  },
+  "cta": {
+    "title": "Parlons de votre projet",
+    "subtitle": "Construisons ensemble des solutions digitales durables",
+    "buttons": {
+      "contact": "Nous contacter",
+      "meeting": "Parler a un architecte SI",
+      "partnership": "Devenir partenaire"
+    }
+  }
+}
+

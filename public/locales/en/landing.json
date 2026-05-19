@@ -1,0 +1,210 @@
+{
+  "hero": {
+    "title": "Engineering Digital Solutions & Managing IT Projects",
+    "subtitle": "We design, deploy and operate high-performance digital solutions for companies, institutions and startups",
+    "cta": {
+      "primary": "Request a diagnostic",
+      "secondary": "Contact an expert"
+    }
+  },
+  "trust": {
+    "title": "They trust us",
+    "subtitle": "Missions completed in Africa & internationally",
+    "clientTypes": [
+      "Institutions",
+      "Companies",
+      "Startups",
+      "NGOs"
+    ],
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Projects delivered",
+      "clients": "Satisfied clients",
+      "countries": "Countries of operation"
+    }
+  },
+  "about": {
+    "title": "About IMPULCIA",
+    "text": "IMPULCIA is a company specialized in engineering digital solutions and managing IT projects. We support organizations in their digital transformation through the design of management software, web platforms, information systems and secure cloud infrastructures."
+  },
+  "offers": {
+    "title": "Our structured offerings",
+    "poles": {
+      "engineering": {
+        "title": "Engineering & Software Division",
+        "items": [
+          "ERP, CRM, HRIS",
+          "Business management software",
+          "Custom SaaS",
+          "Analytics & KPI tools"
+        ]
+      },
+      "digital": {
+        "title": "Digital & Platforms Division",
+        "items": [
+          "Institutional websites",
+          "Web & mobile applications",
+          "E-learning platforms",
+          "Client & internal portals"
+        ]
+      },
+      "infrastructure": {
+        "title": "Infrastructure & Cloud Division",
+        "items": [
+          "Shared / dedicated / cloud hosting",
+          "Domain names",
+          "Professional emails",
+          "Security & maintenance"
+        ]
+      },
+      "consulting": {
+        "title": "Consulting & Training Division",
+        "items": [
+          "Digital transformation",
+          "GDPR & compliance",
+          "Business processes",
+          "Digital skills development"
+        ]
+      }
+    }
+  },
+  "why": {
+    "title": "Why IMPULCIA",
+    "items": [
+      {
+        "title": "Performance-driven approach",
+        "description": "Solutions aligned with your business objectives and measurable KPIs"
+      },
+      {
+        "title": "Proven project methodologies",
+        "description": "Agile, Scrum, risk management, structured reporting"
+      },
+      {
+        "title": "Compliance & security",
+        "description": "Adherence to international standards, GDPR, application security"
+      },
+      {
+        "title": "Long-term vision",
+        "description": "Lasting partnership, continuous evolution, long-term support"
+      },
+      {
+        "title": "Adaptation to African context",
+        "description": "Understanding of local issues, solutions adapted to field realities"
+      }
+    ]
+  },
+  "caseStudies": {
+    "title": "Case studies",
+    "subtitle": "Concrete results for our clients",
+    "cases": [
+      {
+        "title": "Modernization of an institutional information system",
+        "context": "Senegalese public institution",
+        "problem": "Obsolete system, lack of traceability, manual processes",
+        "solution": "Design and deployment of a complete digital platform",
+        "result": "60% reduction in processing time, complete traceability"
+      },
+      {
+        "title": "Development of a SaaS platform for SMEs",
+        "context": "Private company",
+        "problem": "Need for an integrated and accessible management tool",
+        "solution": "Custom ERP with web and mobile interface",
+        "result": "40% productivity gain, better decision-making"
+      }
+    ]
+  },
+  "governance": {
+    "title": "Governance & Methods",
+    "subtitle": "A structured and professional approach",
+    "items": [
+      {
+        "title": "Project management",
+        "description": "Regular monitoring, reporting, progress indicators"
+      },
+      {
+        "title": "Risk management",
+        "description": "Identification, mitigation, continuity plan"
+      },
+      {
+        "title": "Documentation & compliance",
+        "description": "Complete documentation, traceability, audits"
+      },
+      {
+        "title": "Performance indicators",
+        "description": "Project KPIs, quality metrics, client satisfaction"
+      }
+    ]
+  },
+  "rgpd": {
+    "title": "GDPR & Compliance",
+    "subtitle": "Data protection and application security",
+    "items": [
+      {
+        "title": "Data protection",
+        "description": "GDPR compliance, personal data management"
+      },
+      {
+        "title": "Application security",
+        "description": "Encryption, authentication, access control"
+      },
+      {
+        "title": "Compliant hosting",
+        "description": "Secure infrastructures, regular backups"
+      },
+      {
+        "title": "GDPR awareness & training",
+        "description": "Team training, best practices, audits"
+      }
+    ]
+  },
+  "innovation": {
+    "title": "Innovation & Africa",
+    "text": "IMPULCIA is part of an African innovation dynamic, designing solutions adapted to local realities while respecting international standards. We believe in useful, responsible and inclusive innovation, serving economic development and the competitiveness of African organizations."
+  },
+  "partners": {
+    "title": "Our partners",
+    "subtitle": "Strategic collaborations for innovation"
+  },
+  "callsForProjects": {
+    "title": "Calls for projects & collaborations",
+    "subtitle": "Join us in innovative projects",
+    "types": [
+      "Public institutions",
+      "Innovation programs",
+      "Strategic partnerships",
+      "Co-development"
+    ],
+    "cta": "Submit a project"
+  },
+  "press": {
+    "title": "Press & Media",
+    "subtitle": "Our news and publications",
+    "items": [
+      "Press releases",
+      "Technical publications",
+      "Official announcements",
+      "Interventions & conferences"
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Let's talk about your project",
+    "form": {
+      "name": "Full name",
+      "email": "Professional email",
+      "company": "Organization",
+      "need": "Type of need",
+      "message": "Your message",
+      "submit": "Send",
+      "schedule": "Talk to an IS architect"
+    },
+    "needs": [
+      "Software development",
+      "Infrastructure & Cloud",
+      "Consulting & Training",
+      "Partnership",
+      "Other"
+    ]
+  }
+}
+

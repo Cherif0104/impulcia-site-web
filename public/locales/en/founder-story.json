@@ -1,0 +1,77 @@
+{
+  "origin": {
+    "title": "A vision born from field experience",
+    "text": "IMPULCIA was born from a simple observation: in Africa, and particularly in Senegal, many companies and institutions have strong digital ambitions, but struggle to find technology partners capable of supporting them end-to-end — from design to operations, from idea to product, from product to growth.",
+    "founderNote": "Our founder has worked in the international and African IT ecosystem. He has seen promising projects fail due to a lack of clear technical vision, expensive solutions deployed without considering local realities, and organizations waste time and money due to insufficient follow-up and maintenance.",
+    "response": "IMPULCIA is the response to these challenges: a company that combines international technical expertise with deep understanding of African issues, to build solutions that truly work, here and now."
+  },
+  "vision": {
+    "title": "Africa can be a leader in digital innovation",
+    "text": "We believe that Africa is not just a technology consumption market, but a breeding ground for innovation and solution creation. The continent's specific challenges — budget constraints, diverse contexts, need for rapid scalability — are also opportunities to invent new approaches.",
+    "commitments": [
+      {
+        "title": "Co-building with local actors",
+        "description": "We don't come to impose models from elsewhere, but to adapt and create solutions with our Senegalese, African and international partners."
+      },
+      {
+        "title": "Training and transferring skills",
+        "description": "Each project is an opportunity to build local teams' capabilities, so that technological mastery remains in the hands of those who use it daily."
+      },
+      {
+        "title": "Thinking long-term",
+        "description": "We don't deliver products and then disappear. We remain partners for evolution, maintenance, continuous improvement."
+      },
+      {
+        "title": "Staying connected to the world",
+        "description": "Based in Senegal, anchored in Africa, we maintain constant watch on international best practices, so that our solutions are local in understanding, global in quality."
+      }
+    ]
+  },
+  "ambition": {
+    "title": "Becoming a reference player, in Senegal, in Africa and globally",
+    "text": "Our ambition is not to become Africa's largest IT services company, but the most useful and reliable for those who trust us.",
+    "recognition": [
+      "The trusted technology partner of companies that want to digitalize without losing their soul or their budget.",
+      "The ally of institutions seeking to modernize their public services with sustainable and secure solutions.",
+      "The support for startups that need a solid technical foundation to convince investors and customers.",
+      "A bridge between Africa and the world: showing that technological excellence can be born and grow in Africa, while remaining connected to international standards."
+    ]
+  },
+  "values": {
+    "title": "What guides us daily",
+    "items": [
+      {
+        "title": "Technical excellence",
+        "description": "We only deliver what truly works, tested, secure and documented."
+      },
+      {
+        "title": "Transparency",
+        "description": "No unnecessary jargon, no surprises on costs or timelines. We communicate clearly, from the start and throughout the project."
+      },
+      {
+        "title": "Pragmatism",
+        "description": "We prefer a simple solution that works over a complex one that impresses but solves nothing."
+      },
+      {
+        "title": "Long-term commitment",
+        "description": "IMPULCIA is not a \"one-shot\" company. We build lasting relationships of trust."
+      },
+      {
+        "title": "Responsible innovation",
+        "description": "We innovate, but always with a goal of real impact and sustainability."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join us in this adventure",
+    "text": "If you share our vision — that of an Africa that innovates, creates, and exports its digital solutions — then let's talk.",
+    "audiences": [
+      "A company looking to transform your processes",
+      "An institution seeking to modernize your services",
+      "A startup wanting to structure your product",
+      "A partner wanting to co-build ambitious projects"
+    ],
+    "closing": "Together, let's build tomorrow's digital Africa."
+  }
+}
+

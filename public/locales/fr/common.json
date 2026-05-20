@@ -8,7 +8,7 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "products": "Solutions SI",
+    "products": "Solutions systèmes d'information",
     "expertise": "Expertises",
     "technologies": "Technologies",
     "serviceOffers": "Nos offres de services",
@@ -16,7 +16,7 @@
     "contact": "Contact"
   },
   "cta": {
-    "talkToExpert": "Parler a un architecte SI",
+    "talkToExpert": "Parler a un architecte systèmes d'information",
     "discoverSolutions": "Nos solutions",
     "discussProject": "Demander un diagnostic",
     "requestDiagnostic": "Demander un diagnostic",
@@ -25,7 +25,7 @@
     "scheduleCall": "Lancer un audit"
   },
   "footer": {
-    "description": "Societe d'ingenierie digitale africaine — conception, developpement et deploiement de SI sur mesure.",
+    "description": "Societe d'ingenierie digitale africaine — conception, developpement et deploiement de systèmes d'information sur mesure.",
     "quickLinks": "Navigation",
     "product": "Produits",
     "company": "Entreprise",

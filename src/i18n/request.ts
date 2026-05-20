@@ -8,7 +8,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  const [common, enterprise, sections, landing, homepage, founderStory, legal, crm] =
+  const [common, enterprise, sections, landing, homepage, founderStory, legal, crm, seo] =
     await Promise.all([
       import(`../../public/locales/${locale}/common.json`),
       import(`../../public/locales/${locale}/enterprise.json`),
@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       import(`../../public/locales/${locale}/founder-story.json`),
       import(`../../public/locales/${locale}/legal.json`),
       import(`../../public/locales/${locale}/crm.json`),
+      import(`../../public/locales/${locale}/seo.json`),
     ]);
 
   return {
@@ -31,6 +32,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       founderStory: founderStory.default,
       legal: legal.default,
       crm: crm.default,
+      seo: seo.default,
     },
   };
 });

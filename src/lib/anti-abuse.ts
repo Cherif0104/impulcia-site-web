@@ -32,8 +32,16 @@ type RateLimitProvider = {
 };
 
 const upstashUrl = process.env.UPSTASH_REDIS_REST_URL?.trim();
+
+function isPlaceholderUpstashUrl(url: string | undefined): boolean {
+  if (!url) return false;
+  const lower = url.toLowerCase();
+  return lower.includes('your-upstash-endpoint') || lower.includes('example.upstash.io');
+}
+
+const upstashUrlEffective = isPlaceholderUpstashUrl(upstashUrl) ? undefined : upstashUrl;
 const upstashToken = process.env.UPSTASH_REDIS_REST_TOKEN?.trim();
-const hasUpstashConfig = Boolean(upstashUrl && upstashToken);
+const hasUpstashConfig = Boolean(upstashUrlEffective && upstashToken);
 const isProduction = process.env.NODE_ENV === 'production';
 
 type AntiAbuseHealth = {

@@ -1,3 +1,5 @@
+export { forInstitutionsMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import AbmLandingPage from '@/src/components/enterprise/AbmLandingPage';
 
 export default async function ForInstitutionsPage({

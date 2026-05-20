@@ -1,3 +1,5 @@
+export { technologiesMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { Link } from '@/src/lib/routing';
 import ArchitectWhatsAppCta from '@/src/components/forms/ArchitectWhatsAppCta';
 

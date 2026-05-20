@@ -9,7 +9,7 @@ const variants = {
       title: 'Pour Grands Comptes',
       subtitle:
         'Accélérez vos programmes de transformation avec un partenaire capable de déployer ERP, gouvernance et data à l’échelle multi-entités.',
-      proof: ['Pilotage multi-filiales', 'Intégration SI existant', 'Roadmap transformation 12-24 mois'],
+      proof: ['Pilotage multi-filiales', 'Intégration du système d\'information existant', 'Roadmap transformation 12-24 mois'],
     },
     en: {
       title: 'For Enterprise Accounts',

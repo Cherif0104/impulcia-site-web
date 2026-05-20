@@ -42,7 +42,7 @@
     ]
   },
   "offers": {
-    "title": "Nos offres SI sur mesure",
+    "title": "Nos offres systèmes d'information sur mesure",
     "subtitle": "Des systèmes conçus pour vos réalités métiers, pas des SaaS prêts à l’emploi",
     "build": {
       "title": "BUILD",
@@ -101,7 +101,7 @@
     "items": [
       {
         "title": "Développement logiciel & plateformes",
-        "description": "Conception de SI sur mesure: ERP, CRM, SIG, SIRH, apps web/mobile et plateformes métiers"
+        "description": "Conception de systèmes d'information sur mesure: ERP, CRM, SIG, SIRH, apps web/mobile et plateformes métiers"
       },
       {
         "title": "Solutions cloud & hébergement",
@@ -210,7 +210,7 @@
     "subtitle": "Construisons ensemble des solutions digitales durables",
     "buttons": {
       "contact": "Nous contacter",
-      "meeting": "Parler a un architecte SI",
+      "meeting": "Parler a un architecte systèmes d'information",
       "partnership": "Devenir partenaire"
     }
   }

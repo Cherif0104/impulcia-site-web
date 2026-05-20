@@ -1,10 +1,10 @@
-# Checklist Transformation SI Afrique Francophone
+# Checklist Transformation systèmes d'information Afrique Francophone
 
 Utilisez cette checklist pour évaluer votre niveau de maturité digitale avant un projet ERP, Cloud ou gouvernance numérique.
 
 ## 1. Gouvernance et pilotage
 
-- [ ] Vision SI validée par la direction.
+- [ ] Vision systèmes d'information validée par la direction.
 - [ ] Priorités business formalisées (12 mois).
 - [ ] Sponsors identifiés (DG, DAF, DSI, métiers).
 - [ ] KPI de succès définis (productivité, délai, qualité de données).

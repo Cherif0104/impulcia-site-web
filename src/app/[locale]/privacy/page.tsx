@@ -1,3 +1,5 @@
+export { privacyMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 export default async function PrivacyPage({
   params,
 }: {

@@ -1,3 +1,5 @@
+export { cadrageProjetMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import ServiceOfferPage from '@/src/components/enterprise/ServiceOfferPage';
 
 export default async function CadrageProjetPage({
@@ -13,7 +15,7 @@ export default async function CadrageProjetPage({
       locale={locale}
       eyebrow={isFr ? 'Cadrage projet' : 'Project scoping'}
       title={
-        isFr ? 'Alignez votre projet SI avec vos priorités métier' : 'Align your IS project with business priorities'
+        isFr ? 'Alignez votre projet systèmes d\'information avec vos priorités métier' : 'Align your information systems project with business priorities'
       }
       subtitle={
         isFr
@@ -22,8 +24,8 @@ export default async function CadrageProjetPage({
       }
       vision={
         isFr
-          ? "Créer une vision SI partagée entre métiers, DSI et direction générale pour engager un programme réaliste et pilotable."
-          : 'Build a shared IS vision across business, IT and leadership to launch a realistic, governable program.'
+          ? "Créer une vision systèmes d'information partagée entre métiers, DSI et direction générale pour engager un programme réaliste et pilotable."
+          : 'Build a shared information systems vision across business, IT and leadership to launch a realistic, governable program.'
       }
       methodology={
         isFr
@@ -63,12 +65,12 @@ export default async function CadrageProjetPage({
       outcomes={
         isFr
           ? [
-              'Vision SI partagée entre directions métier et IT',
+              'Vision systèmes d\'information partagée entre directions métier et IT',
               'Roadmap validée avec dépendances techniques clarifiées',
               'Réduction du risque de dérive coût / délai en exécution',
             ]
           : [
-              'Shared IS vision between business and IT leaders',
+              'Shared information systems vision between business and IT leaders',
               'Validated roadmap with clarified technical dependencies',
               'Lower cost and timeline drift risk during execution',
             ]

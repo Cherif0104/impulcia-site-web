@@ -1,3 +1,5 @@
+export { realisationsMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import Button from '@/src/components/ui/Button';
 import WhatsAppButton from '@/src/components/forms/WhatsAppButton';
 
@@ -54,7 +56,7 @@ export default async function RealisationsPage({
             {isFr ? 'Réalisations' : 'Case studies'}
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-            {isFr ? 'Des références SI orientées résultats' : 'IS references focused on outcomes'}
+            {isFr ? 'Des références systèmes d\'information orientées résultats' : 'Information systems references focused on outcomes'}
           </h1>
           <p className="text-brand-muted text-lg leading-relaxed max-w-3xl">
             {isFr

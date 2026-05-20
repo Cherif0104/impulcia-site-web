@@ -1,3 +1,5 @@
+export { cookiesMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 export default async function CookiesPage({
   params,
 }: {

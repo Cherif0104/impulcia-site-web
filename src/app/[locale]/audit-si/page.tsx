@@ -1,3 +1,5 @@
+export { auditSiMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import ServiceOfferPage from '@/src/components/enterprise/ServiceOfferPage';
 
 export default async function AuditSiPage({
@@ -11,7 +13,7 @@ export default async function AuditSiPage({
   return (
     <ServiceOfferPage
       locale={locale}
-      eyebrow={isFr ? 'Audit SI' : 'IS audit'}
+      eyebrow={isFr ? 'Audit système d\'information' : 'Information system audit'}
       title={isFr ? "Mesurez la maturité de votre système d'information" : 'Measure your information system maturity'}
       subtitle={
         isFr
@@ -20,8 +22,8 @@ export default async function AuditSiPage({
       }
       vision={
         isFr
-          ? "Établir une base factuelle fiable pour prioriser vos investissements SI et réduire les zones de risque."
-          : 'Establish a reliable fact base to prioritize IS investments and reduce risk exposure.'
+          ? "Établir une base factuelle fiable pour prioriser vos investissements systèmes d'information et réduire les zones de risque."
+          : 'Establish a reliable fact base to prioritize information systems investments and reduce risk exposure.'
       }
       methodology={
         isFr

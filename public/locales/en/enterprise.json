@@ -7,7 +7,7 @@
     "cta": {
       "solutions": "Request a diagnostic",
       "portfolio": "View our work",
-      "demo": "Talk to an IS architect"
+      "demo": "Talk to an information systems architect"
     }
   },
   "impact": {
@@ -21,16 +21,16 @@
   "about": {
     "eyebrow": "Who we are",
     "title": "An information systems engineering company",
-    "body": "IMPULCIA AFRIQUE designs, builds and develops custom digital solutions for companies and institutions, from IS strategy to production rollout.",
+    "body": "IMPULCIA AFRIQUE designs, builds and develops custom digital solutions for companies and institutions, from information systems strategy to production rollout.",
     "points": [
       "Digital engineering & information systems",
-      "End-to-end IS design and deployment",
+      "End-to-end information systems design and deployment",
       "Multi-country expertise: Senegal, Mauritania, Morocco, West Africa",
       "PMO, governance and enterprise architectures"
     ]
   },
   "products": {
-    "eyebrow": "Our custom IS services",
+    "eyebrow": "Our custom information systems services",
     "title": "Systems aligned with your business goals",
     "subtitle": "ERP, CRM, GIS, HRIS, web/mobile apps, marketplaces, POS systems, business software and corporate websites.",
     "items": [
@@ -103,7 +103,7 @@
     "subtitle": "From audit to operations — a complete enterprise offering.",
     "items": [
       { "title": "Digital transformation", "description": "Strategy, change management and deployment." },
-      { "title": "ERP & business systems", "description": "Design, integration and IS operations." },
+      { "title": "ERP & business systems", "description": "Design, integration and information systems operations." },
       { "title": "Cloud & infrastructure", "description": "Scalable, highly available architectures." },
       { "title": "Cybersecurity", "description": "Protection, audit and compliance." },
       { "title": "Mobile applications", "description": "Native and cross-platform apps." },
@@ -153,7 +153,7 @@
     "eyebrow": "Approach",
     "title": "IMPULCIA methodology",
     "steps": [
-      { "title": "Audit & assessment", "description": "Field understanding and IS mapping." },
+      { "title": "Audit & assessment", "description": "Field understanding and information systems mapping." },
       { "title": "Architecture", "description": "Systemic design and technology choices." },
       { "title": "Design & development", "description": "Custom products and agile deployment." },
       { "title": "Deployment & training", "description": "Go-live and user adoption." },
@@ -161,11 +161,11 @@
     ]
   },
   "demo": {
-    "eyebrow": "IS scoping & audit",
+    "eyebrow": "Information systems scoping & audit",
     "title": "Structure your digital roadmap",
     "subtitle": "Assess your current systems, prioritize business needs and define a deployment roadmap tailored to your context.",
     "cta": "Launch an audit",
-    "features": ["Process assessment", "IS diagnostic", "90-day roadmap", "Target deployment plan"]
+    "features": ["Process assessment", "Information systems diagnostic", "90-day roadmap", "Target deployment plan"]
   },
   "caseStudies": {
     "eyebrow": "Case studies",
@@ -254,7 +254,7 @@
   "cta": {
     "title": "Let's build your digital infrastructure",
     "subtitle": "Talk to our system architects and discover how IMPULCIA transforms your organization.",
-    "primary": "Start IS scoping",
+    "primary": "Start information systems scoping",
     "secondary": "Contact an expert"
   }
 }

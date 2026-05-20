@@ -63,7 +63,7 @@ export default function ContactLeadForm({ mode = 'contact', source, className = 
         message: 'Additional details',
         consent:
           'I agree to be contacted by IMPULCIA AFRIQUE regarding my request. My data is used only for project qualification.',
-        checklist: 'I want to receive the IS transformation checklist.',
+        checklist: 'I want to receive the information systems transformation checklist.',
         submit:
           mode === 'partner' ? 'Submit partnership request' : mode === 'diagnostic' ? 'Submit diagnostic' : 'Send request',
         submitting: 'Submitting...',
@@ -101,7 +101,7 @@ export default function ContactLeadForm({ mode = 'contact', source, className = 
       message: 'Details complementaires',
       consent:
         'J accepte d etre contacte(e) par IMPULCIA AFRIQUE pour le traitement de ma demande. Mes donnees servent uniquement a la qualification.',
-      checklist: 'Je souhaite recevoir la checklist transformation SI.',
+      checklist: 'Je souhaite recevoir la checklist transformation systèmes d\'information.',
       submit:
         mode === 'partner'
           ? 'Envoyer la demande de partenariat'

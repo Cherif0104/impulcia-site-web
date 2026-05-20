@@ -1,3 +1,5 @@
+export { techCategoryMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { Link } from '@/src/lib/routing';
 
 type Detail = {

@@ -1,3 +1,5 @@
+export { aboutMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { Link } from '@/src/lib/routing';
 import ArchitectWhatsAppCta from '@/src/components/forms/ArchitectWhatsAppCta';
 
@@ -103,7 +105,7 @@ export default async function AboutPage({
             {isFr ? 'A propos' : 'About'}
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold md:text-5xl text-slate-900 dark:text-white">
-            {isFr ? 'IMPULCIA AFRIQUE, partenaire SI des organisations ambitieuses' : 'IMPULCIA AFRIQUE, IS partner for ambitious organizations'}
+            {isFr ? 'IMPULCIA AFRIQUE, partenaire systèmes d\'information des organisations ambitieuses' : 'IMPULCIA AFRIQUE, information systems partner for ambitious organizations'}
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-brand-muted">
             {isFr
@@ -161,7 +163,7 @@ export default async function AboutPage({
       <section className="section-container mt-10">
         <div className="rounded-2xl border border-brand-accent/30 bg-gradient-to-r from-cyan-50 to-blue-50 p-8 dark:from-brand-navy dark:to-brand-slate dark:bg-none">
           <h2 className="text-2xl font-display font-bold text-slate-900 dark:text-white">
-            {isFr ? 'Echangeons sur votre feuille de route SI' : 'Let us discuss your information systems roadmap'}
+            {isFr ? 'Echangeons sur votre feuille de route systèmes d\'information' : 'Let us discuss your information systems roadmap'}
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-brand-muted">
             {isFr

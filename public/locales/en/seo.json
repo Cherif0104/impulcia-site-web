@@ -1,0 +1,134 @@
+{
+  "site": {
+    "name": "IMPULCIA AFRIQUE",
+    "titleTemplate": "%s | IMPULCIA AFRIQUE",
+    "defaultTitle": "IMPULCIA AFRIQUE — Information systems engineering in Dakar, Senegal",
+    "defaultDescription": "Digital engineering firm in Dakar, Senegal: design, development and deployment of custom information systems for enterprises and institutions across West Africa and Africa. ERP, CRM, cloud and advisory."
+  },
+  "pages": {
+    "home": {
+      "title": "Information systems engineering — Dakar, Senegal & Africa",
+      "description": "IMPULCIA AFRIQUE designs and deploys custom information systems in Dakar: ERP, CRM, web/mobile apps, integration and delivery support across West Africa and Africa."
+    },
+    "about": {
+      "title": "About — Digital engineering firm in Dakar",
+      "description": "IMPULCIA vision, method and teams in Dakar: information systems engineering, data governance and operational excellence in Senegal and across Africa."
+    },
+    "expertise": {
+      "title": "Information systems expertise & digital transformation",
+      "description": "Digital transformation, ERP, cloud, cybersecurity, data and mobile applications — full enterprise offering from audit to operations, based in Dakar for Africa."
+    },
+    "technologies": {
+      "title": "Technologies & technical stack",
+      "description": "Next.js, React, Node.js, PostgreSQL, Supabase, cloud and security — our stack for performant, scalable information systems delivered from Dakar."
+    },
+    "techFrontend": {
+      "title": "Front-end & user experience",
+      "description": "Fast, accessible, conversion-focused interfaces for client portals, partner extranets and business backoffice."
+    },
+    "techBackend": {
+      "title": "Back-end & information systems integration",
+      "description": "Robust business services, secure APIs and ERP, CRM and third-party integration without operational disruption."
+    },
+    "techDataCloudSecurity": {
+      "title": "Data, cloud & security",
+      "description": "Data platform, cloud operations, CI/CD and security hardening to industrialize flows and resilience."
+    },
+    "services": {
+      "title": "Information systems service offerings",
+      "description": "Audit, scoping, architecture, Agile delivery and long-term support for your digital transformation projects in Dakar and across Africa."
+    },
+    "partnerships": {
+      "title": "Partners & ecosystem",
+      "description": "Technology and institutional partners working with IMPULCIA to deliver solutions in Senegal and across Africa."
+    },
+    "contact": {
+      "title": "Contact in Dakar — Talk to an information systems architect",
+      "description": "Contact IMPULCIA AFRIQUE in Dakar, Senegal for a diagnostic, project scoping or a demo of our information system solutions."
+    },
+    "coya": {
+      "title": "COYA ERP — Next-generation ERP",
+      "description": "COYA ERP: unified governance, finance, HR, logistics, projects, document management and reporting for multi-entity organizations in Africa."
+    },
+    "sentrajet": {
+      "title": "SenTrajet — Smart mobility & transport",
+      "description": "SenTrajet: geolocation, trip management, urban mobility and real-time operational tracking."
+    },
+    "patrimo": {
+      "title": "Patrimo — Real estate & asset management",
+      "description": "Patrimo: property management, leases, maintenance and asset reporting."
+    },
+    "sunugest": {
+      "title": "SunuGest — Cloud & business systems",
+      "description": "SunuGest: cloud hosting, document management and integrated business tools."
+    },
+    "mbourake": {
+      "title": "Mbouraké — Local services & community",
+      "description": "Mbouraké: community platform connecting services, users and local stakeholders."
+    },
+    "forEnterprises": {
+      "title": "Enterprise — Large account information systems",
+      "description": "Dedicated enterprise pathway: information systems governance, ERP, multi-site integration and scale-up support across Africa."
+    },
+    "forInstitutions": {
+      "title": "Institutions & public sector — Senegal & Africa",
+      "description": "Information system solutions for institutions: compliance, traceability, donor reporting and multi-country deployment in West Africa."
+    },
+    "forDonors": {
+      "title": "Donors & funded projects",
+      "description": "Funded project management: reporting, KPIs, data governance and operational visibility."
+    },
+    "realisations": {
+      "title": "Case studies & deliveries — Africa",
+      "description": "Explore our information system, ERP and digital platform deployments for organizations in Senegal and across Africa."
+    },
+    "auditSi": {
+      "title": "Information system audit — Maturity & diagnostic",
+      "description": "Assess your information system in Dakar: processes, architecture, security, data and a prioritized remediation plan."
+    },
+    "cadrageProjet": {
+      "title": "Information systems project scoping",
+      "description": "Functional and technical scoping for your project: scope, target architecture and decision-ready roadmap."
+    },
+    "architecteSi": {
+      "title": "Information systems architect — Expert support",
+      "description": "Speak with an IMPULCIA information systems architect in Dakar to structure your digital transformation and technology choices."
+    },
+    "trust": {
+      "title": "Trust & security",
+      "description": "IMPULCIA commitments on security, compliance, continuity and data protection."
+    },
+    "trustCenter": {
+      "title": "Trust center",
+      "description": "Documentation, practices and assurances for operational trust in your information systems."
+    },
+    "careers": {
+      "title": "Careers in Dakar — Join IMPULCIA",
+      "description": "Open roles in information systems engineering, development and delivery to grow our teams in Dakar, Senegal."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How IMPULCIA AFRIQUE collects, uses and protects your personal data."
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "description": "Information about cookies used on the IMPULCIA AFRIQUE website and your choices."
+    },
+    "legal": {
+      "title": "Legal notice",
+      "description": "Legal information about IMPULCIA AFRIQUE, the site publisher and terms of use."
+    },
+    "landing": {
+      "title": "Institutional landing",
+      "description": "Institutional overview of IMPULCIA — digital engineering and IT project management in Dakar and across Africa."
+    },
+    "clientLogin": {
+      "title": "Client portal — Sign in",
+      "description": "Secure access to the IMPULCIA client space."
+    },
+    "clientSpace": {
+      "title": "Client space",
+      "description": "IMPULCIA client space for project and request tracking."
+    }
+  }
+}

@@ -1,3 +1,5 @@
+export { expertiseMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { Link } from '@/src/lib/routing';
 import ContactLeadForm from '@/src/components/forms/ContactLeadForm';
 import ArchitectWhatsAppCta from '@/src/components/forms/ArchitectWhatsAppCta';
@@ -20,11 +22,11 @@ export default async function ExpertisePage({
   const domains: ExpertiseDomain[] = isFr
     ? [
         {
-          title: 'Architecture SI & urbanisation',
+          title: 'Architecture systèmes d\'information & urbanisation',
           description:
             'Cadrage d architectures cibles, rationalisation applicative et alignement des priorites business/IT.',
           capabilities: ['Audit du patrimoine applicatif', 'Schemas d integration API-first', 'Roadmap de modernisation progressive'],
-          useCases: ['Refonte SI multi-entites', 'Urbanisation ERP + CRM', 'Plan de convergence filiales'],
+          useCases: ['Refonte systèmes d\'information multi-entites', 'Urbanisation ERP + CRM', 'Plan de convergence filiales'],
         },
         {
           title: 'Delivery de plateformes metier',
@@ -43,11 +45,11 @@ export default async function ExpertisePage({
       ]
     : [
         {
-          title: 'IS architecture & enterprise design',
+          title: 'Information systems architecture & enterprise design',
           description:
             'Target architecture design, application landscape rationalization, and alignment between business and IT priorities.',
           capabilities: ['Application portfolio assessment', 'API-first integration blueprints', 'Progressive modernization roadmap'],
-          useCases: ['Multi-entity IS redesign', 'ERP and CRM urbanization', 'Subsidiary convergence plans'],
+          useCases: ['Multi-entity information systems redesign', 'ERP and CRM urbanization', 'Subsidiary convergence plans'],
         },
         {
           title: 'Business platform delivery',
@@ -67,13 +69,13 @@ export default async function ExpertisePage({
 
   const outcomes = isFr
     ? [
-        'Visibilite claire sur les priorites SI a 12-24 mois',
+        'Visibilite claire sur les priorites systèmes d\'information a 12-24 mois',
         'Reduction du risque projet grace a un cadrage robuste',
         'Acceleration du time-to-value sur les initiatives digitales',
         'Montee en maturite des equipes metier et IT',
       ]
     : [
-        'Clear IS priorities for the next 12-24 months',
+        'Clear information systems priorities for the next 12-24 months',
         'Lower delivery risk through robust scoping',
         'Faster time-to-value across digital initiatives',
         'Stronger business and IT team maturity',
@@ -129,8 +131,8 @@ export default async function ExpertisePage({
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-brand-muted">
             {isFr
-              ? 'Nos equipes croisent strategie SI, execution produit et excellence operationnelle pour transformer vos objectifs en resultats mesurables.'
-              : 'Our teams combine IS strategy, product execution, and operational excellence to turn your priorities into measurable outcomes.'}
+              ? 'Nos equipes croisent strategie systèmes d\'information, execution produit et excellence operationnelle pour transformer vos objectifs en resultats mesurables.'
+              : 'Our teams combine information systems strategy, product execution, and operational excellence to turn your priorities into measurable outcomes.'}
           </p>
         </div>
       </section>
@@ -201,7 +203,7 @@ export default async function ExpertisePage({
       <section className="section-container mt-10">
         <div className="rounded-2xl border border-brand-accent/30 bg-gradient-to-r from-cyan-50 to-blue-50 p-8 dark:from-brand-navy dark:to-brand-slate dark:bg-none">
           <h2 className="text-2xl font-display font-bold text-slate-900 dark:text-white">
-            {isFr ? 'Evaluer votre maturite SI' : 'Assess your IS maturity'}
+            {isFr ? 'Evaluer votre maturite systèmes d\'information' : 'Assess your information systems maturity'}
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-brand-muted">
             {isFr

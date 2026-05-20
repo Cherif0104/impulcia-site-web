@@ -1,3 +1,5 @@
+export { homeMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import EnterpriseHero from '@/src/components/enterprise/EnterpriseHero';
 import ImpactSection from '@/src/components/enterprise/ImpactSection';
 import AboutImpulciaSection from '@/src/components/enterprise/AboutImpulciaSection';

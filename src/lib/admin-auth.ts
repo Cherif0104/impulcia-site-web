@@ -81,9 +81,6 @@ function readRoleCookieFromRequest(request: NextRequest): string | null {
 }
 
 export async function getCurrentAdminRole(request?: NextRequest): Promise<string> {
-  const roleFromHeader = request?.headers.get('x-impulcia-admin-role')?.trim();
-  if (roleFromHeader) return roleFromHeader;
-
   const roleFromCookie = request ? readRoleCookieFromRequest(request) : await readRoleCookieFromServer();
   if (roleFromCookie) return roleFromCookie;
 

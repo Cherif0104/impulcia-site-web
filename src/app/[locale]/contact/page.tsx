@@ -1,3 +1,5 @@
+export { contactMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import ContactLeadForm from '@/src/components/forms/ContactLeadForm';
 
 export default async function ContactPage({
@@ -16,7 +18,7 @@ export default async function ContactPage({
             {isFr ? 'Contact' : 'Contact'}
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold md:text-5xl text-slate-900 dark:text-white">
-            {isFr ? 'Parlons de vos enjeux SI' : 'Let us discuss your IS priorities'}
+            {isFr ? 'Parlons de vos enjeux systèmes d\'information' : 'Let us discuss your information systems priorities'}
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-brand-muted">
             {isFr

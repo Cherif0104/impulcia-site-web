@@ -7,7 +7,7 @@
     "cta": {
       "solutions": "Demander un diagnostic",
       "portfolio": "Voir nos réalisations",
-      "demo": "Parler a un architecte SI"
+      "demo": "Parler a un architecte systèmes d'information"
     }
   },
   "impact": {
@@ -21,16 +21,16 @@
   "about": {
     "eyebrow": "Qui est IMPULCIA",
     "title": "Une societe d'ingenierie des systemes d'information",
-    "body": "IMPULCIA AFRIQUE conçoit, cree et developpe des solutions digitales sur mesure pour les entreprises, institutions et organisations: de la strategie SI a la mise en production.",
+    "body": "IMPULCIA AFRIQUE conçoit, cree et developpe des solutions digitales sur mesure pour les entreprises, institutions et organisations: de la strategie systèmes d'information a la mise en production.",
     "points": [
       "Ingénierie digitale & systèmes d'information",
-      "Conception et deploiement de SI de bout en bout",
+      "Conception et deploiement de systèmes d'information de bout en bout",
       "Expertise multi-pays : Sénégal, Mauritanie, Maroc, Afrique de l'Ouest",
       "PMO, gouvernance et architectures enterprise"
     ]
   },
   "products": {
-    "eyebrow": "Nos offres SI sur mesure",
+    "eyebrow": "Nos offres systèmes d'information sur mesure",
     "title": "Des systemes alignes sur vos objectifs metiers",
     "subtitle": "ERP, CRM, SIG, SIRH, applications web/mobile, marketplaces, systemes de caisse, logiciels metiers et sites corporate.",
     "items": [
@@ -103,7 +103,7 @@
     "subtitle": "De l'audit à l'exploitation — une offre enterprise complète.",
     "items": [
       { "title": "Transformation digitale", "description": "Stratégie, conduite du changement et déploiement." },
-      { "title": "ERP & systèmes métiers", "description": "Conception, intégration et exploitation de SI." },
+      { "title": "ERP & systèmes métiers", "description": "Conception, intégration et exploitation des systèmes d'information." },
       { "title": "Cloud & infrastructure", "description": "Architectures scalables et haute disponibilité." },
       { "title": "Cybersécurité", "description": "Protection, audit et conformité." },
       { "title": "Applications mobiles", "description": "Apps natives et cross-platform." },
@@ -153,7 +153,7 @@
     "eyebrow": "Approche",
     "title": "Méthodologie IMPULCIA",
     "steps": [
-      { "title": "Audit & diagnostic", "description": "Compréhension terrain et cartographie SI." },
+      { "title": "Audit & diagnostic", "description": "Compréhension terrain et cartographie des systèmes d'information." },
       { "title": "Architecture", "description": "Conception systémique et choix technologiques." },
       { "title": "Conception & développement", "description": "Produits sur mesure et déploiement agile." },
       { "title": "Déploiement & formation", "description": "Mise en production et adoption utilisateurs." },
@@ -161,11 +161,11 @@
     ]
   },
   "demo": {
-    "eyebrow": "Cadrage & audit SI",
+    "eyebrow": "Cadrage & audit systèmes d'information",
     "title": "Structurons votre trajectoire digitale",
     "subtitle": "Audit de l'existant, priorisation metier et feuille de route de deploiement adaptee a votre contexte.",
     "cta": "Lancer un audit",
-    "features": ["Analyse des processus", "Diagnostic SI", "Roadmap 90 jours", "Plan de deploiement cible"]
+    "features": ["Analyse des processus", "Diagnostic systèmes d'information", "Roadmap 90 jours", "Plan de deploiement cible"]
   },
   "caseStudies": {
     "eyebrow": "Cas clients",
@@ -254,7 +254,7 @@
   "cta": {
     "title": "Construisons votre infrastructure numérique",
     "subtitle": "Échangez avec nos architectes système et découvrez comment IMPULCIA transforme votre organisation.",
-    "primary": "Lancer un cadrage SI",
+    "primary": "Lancer un cadrage systèmes d'information",
     "secondary": "Contacter un expert"
   }
 }

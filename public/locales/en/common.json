@@ -8,7 +8,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "products": "IS Solutions",
+    "products": "Information system solutions",
     "expertise": "Expertise",
     "technologies": "Technologies",
     "serviceOffers": "Service offerings",
@@ -16,7 +16,7 @@
     "contact": "Contact"
   },
   "cta": {
-    "talkToExpert": "Talk to an IS architect",
+    "talkToExpert": "Talk to an information systems architect",
     "discoverSolutions": "Our solutions",
     "discussProject": "Request a diagnostic",
     "requestDiagnostic": "Request a diagnostic",

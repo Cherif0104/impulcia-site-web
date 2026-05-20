@@ -4,12 +4,16 @@
 
 Copier `.env.example` vers `.env.local` puis renseigner:
 
-- `ADMIN_SECRET` (obligatoire): secret admin pour `/fr/admin` et `/en/admin`
-- `NEXT_PUBLIC_SUPABASE_URL` (recommande en production)
-- `SUPABASE_SERVICE_ROLE_KEY` (recommande en production)
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (optionnel si service role absent)
+- `ADMIN_SECRET` (obligatoire, >= 32 caracteres en production): secret admin pour `/fr/admin` et `/en/admin`
+- `CLIENT_AUTH_SECRET` (obligatoire en production, distinct de `ADMIN_SECRET`): espace client
+- `ADMIN_ENFORCE_ROLES=true` (obligatoire en production): enforcement des roles admin via cookie serveur
+- `NEXT_PUBLIC_SUPABASE_URL` (obligatoire en production)
+- `SUPABASE_SERVICE_ROLE_KEY` (obligatoire en production — pas anon seul)
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (optionnel en dev)
 - `UPSTASH_REDIS_REST_URL` (obligatoire en production pour anti-abus distribue)
 - `UPSTASH_REDIS_REST_TOKEN` (obligatoire en production pour anti-abus distribue)
+- `SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` (recommande en production)
+- `NEXT_PUBLIC_APP_URL` (ex: `https://impulcia-afrique.com`)
 
 Sans variables Supabase, le CRM bascule en memoire (non persistant).
 Sans variables Upstash:
@@ -44,7 +48,10 @@ Les scripts utilisent `node ./node_modules/next/dist/bin/next` pour eviter les p
 - [ ] Formulaire lead envoie bien vers `/api/leads`
 - [ ] Consentement cookies sauvegarde via `/api/consent`
 - [ ] `UPSTASH_REDIS_REST_*` configurees en production (obligatoire)
-- [ ] Verifier `GET /api/admin/health` retourne `antiAbuse.provider=upstash` et `ok=true`
+- [ ] `CLIENT_AUTH_SECRET` configure et different de `ADMIN_SECRET`
+- [ ] `ADMIN_ENFORCE_ROLES=true` sur Vercel
+- [ ] Verifier `GET /api/admin/health` retourne `ok=true`, `antiAbuse.provider=upstash`, `persistence.provider=supabase`
+- [ ] `npm run smoke:api -- https://impulcia-afrique.com`
 - [ ] Dashboard admin charge sans erreur (`/fr/admin`)
 - [ ] Limitation anti-abus activee sur endpoints publics (429 observe apres spam test)
 
@@ -72,4 +79,6 @@ Seuils d'alerte recommandes:
 
 - Alerte warning: 2 echecs consecutifs (env. 4 minutes si cron 2 min)
 - Alerte critique: 5 echecs consecutifs ou HTTP `>= 500`
-- Escalade immediate si payload indique `antiAbuse.provider=memory` en production
+- Escalade immediate si payload indique `antiAbuse.provider=memory` ou `persistence.provider=memory` en production
+
+Runbook complet: `docs/ops/CONTINUITE.md` — registre acces: `docs/ops/ACCES_EQUIPE.md`

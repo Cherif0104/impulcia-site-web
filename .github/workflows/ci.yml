@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  ADMIN_SECRET: ci-placeholder-admin-secret-min-32-chars
+  CLIENT_AUTH_SECRET: ci-placeholder-client-secret-32chars-distinct
+  ADMIN_ENFORCE_ROLES: 'true'
+  NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+  SUPABASE_SERVICE_ROLE_KEY: ci-placeholder-supabase-service-role-key
+  UPSTASH_REDIS_REST_URL: https://example.upstash.io
+  UPSTASH_REDIS_REST_TOKEN: ci-placeholder-upstash-rest-token
+  NEXT_PUBLIC_APP_URL: http://127.0.0.1:4174
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      - run: npm run typecheck
+
+      - run: npm run build
+
+  smoke:
+    runs-on: ubuntu-latest
+    needs: quality
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Start production server
+        run: |
+          npm run start &
+          echo $! > /tmp/next.pid
+          for i in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:4174/api/admin/health > /dev/null; then
+              echo "Server ready"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Server failed to start"
+          exit 1
+
+      - run: npm run smoke:api -- http://127.0.0.1:4174
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/next.pid ]; then
+            kill "$(cat /tmp/next.pid)" 2>/dev/null || true
+          fi

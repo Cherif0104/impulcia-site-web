@@ -1,3 +1,17 @@
+function loadSentryWrapper() {
+  try {
+    const { withSentryConfig } = require('@sentry/nextjs');
+    return withSentryConfig;
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn('[next.config] @sentry/nextjs not available; skipping Sentry wrapper.');
+      return (config) => config;
+    }
+    throw err;
+  }
+}
+
+const withSentryConfig = loadSentryWrapper();
 const createNextIntlPlugin = require('next-intl/plugin');
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
@@ -31,4 +45,11 @@ if (turboAlias) {
     Object.keys(experimentalRest).length > 0 ? experimentalRest : undefined;
 }
 
-module.exports = config;
+module.exports = withSentryConfig(config, {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  hideSourceMaps: true,
+  telemetry: false,
+});

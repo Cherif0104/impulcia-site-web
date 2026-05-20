@@ -17,7 +17,7 @@
   },
   "form": {
     "title": "Demander un diagnostic",
-    "subtitle": "Partagez vos enjeux SI — nos architectes vous recontactent sous 48 h.",
+    "subtitle": "Partagez vos enjeux systèmes d'information — nos architectes vous recontactent sous 48 h.",
     "firstName": "Prénom",
     "lastName": "Nom",
     "email": "E-mail professionnel",
@@ -34,7 +34,7 @@
     "whatsappPrefill": "Bonjour IMPULCIA, je souhaite un cadrage projet pour un systeme d'information sur mesure.",
     "required": "Champ obligatoire",
     "consentNotice": "En envoyant ce formulaire, vous acceptez que nous traitions vos données pour vous recontacter (RGPD).",
-    "checklistOptIn": "Je souhaite recevoir la checklist Transformation SI Afrique francophone.",
+    "checklistOptIn": "Je souhaite recevoir la checklist Transformation systèmes d'information Afrique francophone.",
     "downloadChecklist": "Télécharger la checklist (gratuit)"
   }
 }

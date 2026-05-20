@@ -1,5 +1,7 @@
 # IMPULCIA Website + CRM
 
+[![CI](https://github.com/Cherif0104/impulcia-site-web/actions/workflows/ci.yml/badge.svg)](https://github.com/Cherif0104/impulcia-site-web/actions/workflows/ci.yml)
+
 Site web corporate multilingue (FR/EN) pour IMPULCIA - Ingénierie des solutions informatiques & management de projets numériques.
 
 ## 🚀 Technologies
@@ -80,10 +82,20 @@ Trois variantes de thème disponibles :
 
 Créer un fichier `.env.local` depuis `.env.example`.
 
-Variables minimales:
-- `ADMIN_SECRET` (obligatoire pour le backoffice admin)
-- `NEXT_PUBLIC_SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` (recommandé pour persistance CRM)
-- `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` (obligatoire en production pour rate-limit distribué)
+Variables minimales (voir `.env.example`) :
+- `ADMIN_SECRET` + `CLIENT_AUTH_SECRET` (distincts, >= 32 caractères en production)
+- `ADMIN_ENFORCE_ROLES=true` en production
+- `NEXT_PUBLIC_SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` (obligatoire en production)
+- `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` (obligatoire en production)
+- `SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` (recommandé en production)
+- `NEXT_PUBLIC_APP_URL` — **obligatoire en production** pour les URL canoniques, le sitemap (`/sitemap.xml`), `robots.txt` et les balises Open Graph (ex. `https://impulcia-afrique.com`)
+
+### SEO
+
+- Métadonnées par page : `public/locales/{fr,en}/seo.json` + helpers `src/lib/seo/`
+- Sitemap : `/sitemap.xml` — généré depuis `src/app/sitemap.ts`
+- Robots : `/robots.txt` — admin et espaces client exclus de l’indexation
+- JSON-LD `Organization` / `WebSite` injecté dans le layout `[locale]`
 
 ### Traductions
 
@@ -93,6 +105,7 @@ Les traductions sont dans `public/locales/[locale]/` :
 - `landing.json` - Landing page institutionnelle
 - `homepage.json` - Page d'accueil
 - `founder-story.json` - Storytelling fondateur
+- `seo.json` - Titres et descriptions SEO par page
 
 ## 📝 Scripts
 
@@ -102,6 +115,7 @@ Les traductions sont dans `public/locales/[locale]/` :
 - `npm run lint` - Linter
 - `npm run typecheck` - Verification TypeScript
 - `npm run health:check` - Check operationnel `/api/admin/health` (exit non-0 si KO)
+- `npm run smoke:api` - Tests smoke API (base URL optionnelle en argument)
 
 ## 🚀 Déploiement
 
@@ -123,6 +137,8 @@ Gouvernance nettoyage / zones actives vs legacy: `docs/governance/CLEANUP_REPO.m
 Etat du repository (actif vs legacy + plan): `REPO_STATUS.md`
 
 Monitoring/alerting health (cron/uptime + seuils): voir section dediee dans `DEPLOIEMENT_CRM.md`
+
+Continuité / PRA / accès équipe: `docs/ops/CONTINUITE.md`, `docs/ops/ACCES_EQUIPE.md`
 
 ---
 

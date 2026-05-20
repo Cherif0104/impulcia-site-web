@@ -32,7 +32,7 @@ export default async function AdminManagementPage({
           title: 'Pilotage commercial',
           points: [
             'Vue hebdomadaire des leads nouveaux / qualifies / gagnes',
-            'Suivi des demandes audit SI, cadrage projet et architecte SI',
+            'Suivi des demandes audit système d\'information, cadrage projet et architecte systèmes d\'information',
             'Routine de relance sous 24h sur chaque lead prioritaire',
           ],
         },
@@ -58,7 +58,7 @@ export default async function AdminManagementPage({
           title: 'Commercial management',
           points: [
             'Weekly view of new / qualified / won leads',
-            'Tracking IS audit, project scoping and IS architect requests',
+            'Tracking information system audit, project scoping and information systems architect requests',
             '24h follow-up routine for high-priority leads',
           ],
         },

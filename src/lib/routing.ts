@@ -109,6 +109,10 @@ export const routing = defineRouting({
     '/client/login': {
       fr: '/portail-client/connexion',
       en: '/client/login'
+    },
+    '/careers': {
+      fr: '/carrieres',
+      en: '/careers'
     }
   }
 });

@@ -1,3 +1,5 @@
+export { careersMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { listJobOffers } from '@/src/lib/db';
 
 export default async function CareersPage({

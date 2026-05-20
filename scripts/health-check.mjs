@@ -43,7 +43,11 @@ async function run() {
 
   const checkedAt = typeof payload?.checkedAt === 'string' ? payload.checkedAt : 'n/a';
   const provider = typeof payload?.antiAbuse?.provider === 'string' ? payload.antiAbuse.provider : 'unknown';
-  console.log(`[health-check] healthy endpoint=${endpoint} status=${response.status} provider=${provider} checkedAt=${checkedAt}`);
+  const persistence =
+    typeof payload?.persistence?.provider === 'string' ? payload.persistence.provider : 'unknown';
+  console.log(
+    `[health-check] healthy endpoint=${endpoint} status=${response.status} antiAbuse=${provider} persistence=${persistence} checkedAt=${checkedAt}`
+  );
 }
 
 run();

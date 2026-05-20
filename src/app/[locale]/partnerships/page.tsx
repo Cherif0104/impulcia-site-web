@@ -1,3 +1,5 @@
+export { partnershipsMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import { Link } from '@/src/lib/routing';
 import ContactLeadForm from '@/src/components/forms/ContactLeadForm';
 

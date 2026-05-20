@@ -1,3 +1,5 @@
+export { coyaMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import ProductSolutionPage from '@/src/components/enterprise/ProductSolutionPage';
 
 export default async function CoyaPage({

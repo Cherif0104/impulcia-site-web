@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/src/lib/routing';
 import LanguageSwitcher from './LanguageSwitcher';
-import ThemeToggle from './ThemeToggle';
 
 const navPages = [
   { key: 'about', href: '/about' },
@@ -53,7 +52,6 @@ export default function Header() {
           >
             {locale === 'fr' ? 'Portail client' : 'Client portal'}
           </Link>
-          <ThemeToggle />
           <LanguageSwitcher />
         </div>
 
@@ -95,7 +93,6 @@ export default function Header() {
             >
               {locale === 'fr' ? 'Portail client' : 'Client portal'}
             </Link>
-            <ThemeToggle />
             <LanguageSwitcher />
           </div>
         </div>

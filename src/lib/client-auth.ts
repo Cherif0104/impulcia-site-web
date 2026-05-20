@@ -1,6 +1,7 @@
 import { createHmac, randomBytes, scryptSync, timingSafeEqual } from 'crypto';
 import { cookies } from 'next/headers';
 import { createClient } from '@supabase/supabase-js';
+import { getClientAuthSecretForRuntime } from '@/src/lib/env';
 import { getSupabaseAdmin } from '@/src/lib/supabase/server';
 import { listMemberships, listUserProfiles, updateUserProfile } from '@/src/lib/db';
 import type { Membership, UserProfile } from '@/src/types/crm';
@@ -52,7 +53,7 @@ function fromBase64Url(input: string): Buffer {
 }
 
 function getClientAuthSecret(): string {
-  return process.env.CLIENT_AUTH_SECRET || process.env.ADMIN_SECRET || 'impulcia-dev-client-secret';
+  return getClientAuthSecretForRuntime();
 }
 
 function sign(value: string): string {

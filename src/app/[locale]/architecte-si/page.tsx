@@ -1,3 +1,5 @@
+export { architecteSiMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import ServiceOfferPage from '@/src/components/enterprise/ServiceOfferPage';
 
 export default async function ArchitecteSiPage({
@@ -11,8 +13,8 @@ export default async function ArchitecteSiPage({
   return (
     <ServiceOfferPage
       locale={locale}
-      eyebrow={isFr ? 'Architecte SI' : 'IS architect'}
-      title={isFr ? 'Échangez avec un architecte SI senior' : 'Talk with a senior IS architect'}
+      eyebrow={isFr ? 'Architecte systèmes d\'information' : 'Information systems architect'}
+      title={isFr ? 'Échangez avec un architecte systèmes d\'information senior' : 'Talk with a senior information systems architect'}
       subtitle={
         isFr
           ? "Un échange orienté décision pour valider vos options d'architecture, vos arbitrages make/buy et votre stratégie d'intégration."
@@ -20,8 +22,8 @@ export default async function ArchitecteSiPage({
       }
       vision={
         isFr
-          ? "Sécuriser vos décisions d'architecture pour soutenir la performance business, la conformité et l'évolutivité du SI."
-          : 'Secure architecture decisions that sustain business performance, compliance and IS scalability.'
+          ? "Sécuriser vos décisions d'architecture pour soutenir la performance business, la conformité et l'évolutivité des systèmes d'information."
+          : 'Secure architecture decisions that sustain business performance, compliance and information systems scalability.'
       }
       methodology={
         isFr

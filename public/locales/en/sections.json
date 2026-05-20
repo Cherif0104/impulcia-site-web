@@ -100,7 +100,7 @@
     "items": [
       {
         "title": "Software development & platforms",
-        "description": "Design of custom IS platforms: ERP, CRM, GIS, HRIS, web/mobile apps and domain software"
+        "description": "Design of custom information system platforms: ERP, CRM, GIS, HRIS, web/mobile apps and domain software"
       },
       {
         "title": "Cloud solutions & hosting",
@@ -209,7 +209,7 @@
     "subtitle": "Let's build sustainable digital solutions together",
     "buttons": {
       "contact": "Contact us",
-      "meeting": "Talk to an IS architect",
+      "meeting": "Talk to an information systems architect",
       "partnership": "Become a partner"
     }
   }

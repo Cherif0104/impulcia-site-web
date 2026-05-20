@@ -1,3 +1,5 @@
+export { trustMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 export default async function TrustSecurityPage({
   params,
 }: {

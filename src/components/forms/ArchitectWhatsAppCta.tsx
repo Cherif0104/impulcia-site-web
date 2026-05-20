@@ -15,8 +15,8 @@ type Props = {
 export default function ArchitectWhatsAppCta({ locale, source, className = '', label }: Props) {
   const text =
     locale === 'fr'
-      ? "Bonjour IMPULCIA AFRIQUE, je souhaite parler a un architecte SI pour cadrer mon besoin."
-      : 'Hello IMPULCIA AFRIQUE, I want to speak with an IS architect to scope my project.';
+      ? "Bonjour IMPULCIA AFRIQUE, je souhaite parler a un architecte systèmes d'information pour cadrer mon besoin."
+      : 'Hello IMPULCIA AFRIQUE, I want to speak with an information systems architect to scope my project.';
 
   const href = buildWhatsAppUrl(text);
   const ctaLabel = label ?? (locale === 'fr' ? 'Parler a un architecte' : 'Talk to an architect');

@@ -1,3 +1,5 @@
+export { landingMetadata as generateMetadata } from '@/src/lib/seo/pages';
+
 import HeroSectionInstitutional from '@/src/components/sections/landing/HeroSectionInstitutional';
 import TrustSectionInstitutional from '@/src/components/sections/landing/TrustSectionInstitutional';
 import AboutSection from '@/src/components/sections/landing/AboutSection';

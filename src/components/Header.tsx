@@ -46,6 +46,13 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/client/login"
+            locale={locale}
+            className="rounded-lg border border-brand-border/60 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-brand-accent dark:text-slate-200"
+          >
+            {locale === 'fr' ? 'Portail client' : 'Client portal'}
+          </Link>
           <ThemeToggle />
           <LanguageSwitcher />
         </div>
@@ -80,6 +87,14 @@ export default function Header() {
             </Link>
           ))}
           <div className="flex items-center gap-3 pt-2">
+            <Link
+              href="/client/login"
+              locale={locale}
+              className="rounded-lg border border-brand-border/60 px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200"
+              onClick={() => setOpen(false)}
+            >
+              {locale === 'fr' ? 'Portail client' : 'Client portal'}
+            </Link>
             <ThemeToggle />
             <LanguageSwitcher />
           </div>

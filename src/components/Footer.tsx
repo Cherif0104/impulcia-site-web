@@ -116,6 +116,9 @@ export default function Footer() {
         <div className="border-t border-brand-border/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-brand-muted">{t('footer.copyright')}</p>
           <div className="flex flex-wrap gap-6 text-sm text-brand-muted">
+            <Link href="/client/login" locale={locale} className="hover:text-brand-accent transition">
+              {locale === 'fr' ? 'Portail client' : 'Client portal'}
+            </Link>
             <Link href="/legal" locale={locale} className="hover:text-brand-accent transition">
               {t('footer.legal')}
             </Link>
@@ -131,6 +134,9 @@ export default function Footer() {
             <Link href="/contact" locale={locale} className="hover:text-brand-accent transition">
               {t('footer.support')}
             </Link>
+            <a href={`/${locale}/client/login`} className="hover:text-brand-accent transition">
+              {locale === 'fr' ? 'Portail client' : 'Client portal'}
+            </a>
           </div>
         </div>
       </div>

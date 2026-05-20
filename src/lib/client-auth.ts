@@ -7,13 +7,19 @@ import type { Membership, UserProfile } from '@/src/types/crm';
 
 export const CLIENT_COOKIE = 'impulcia_client_session';
 
-type ClientStatus = 'pending' | 'active' | 'disabled';
+export type ClientStatus = 'pending' | 'active' | 'disabled';
 
 type ClientRoleHintPayload = {
   kind: 'client_auth';
   status: ClientStatus;
   passwordHash?: string;
   updatedAt: string;
+};
+
+export type ClientAuthMeta = {
+  status: ClientStatus;
+  hasPassword: boolean;
+  updatedAt?: string;
 };
 
 export type ClientSession = {
@@ -79,6 +85,15 @@ function parseClientRoleHint(roleHint?: string | null): ClientRoleHintPayload | 
   } catch {
     return null;
   }
+}
+
+export function readClientAuthMeta(roleHint?: string | null): ClientAuthMeta {
+  const parsed = parseClientRoleHint(roleHint);
+  return {
+    status: parsed?.status ?? 'active',
+    hasPassword: Boolean(parsed?.passwordHash),
+    updatedAt: parsed?.updatedAt,
+  };
 }
 
 function stringifyClientRoleHint(payload: ClientRoleHintPayload): string {

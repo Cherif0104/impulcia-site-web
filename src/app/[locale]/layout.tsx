@@ -36,7 +36,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${plusJakarta.variable}`} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${plusJakarta.variable}`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body className="font-sans">
         <script
           dangerouslySetInnerHTML={{

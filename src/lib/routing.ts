@@ -101,6 +101,14 @@ export const routing = defineRouting({
     '/architecte-si': {
       fr: '/architecte-si',
       en: '/is-architect'
+    },
+    '/client-space': {
+      fr: '/espace-client',
+      en: '/client-space'
+    },
+    '/client/login': {
+      fr: '/portail-client/connexion',
+      en: '/client/login'
     }
   }
 });

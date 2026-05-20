@@ -24,6 +24,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   const t = useTranslations('crm.admin');
   const locale = useLocale();
   const pathname = usePathname();
+  const [notificationDegraded, setNotificationDegraded] = useState(false);
   const [notifications, setNotifications] = useState({
     newLeads: 0,
     inboundMessages: 0,
@@ -37,15 +38,20 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
     async function loadSummary() {
       try {
         const res = await fetch('/api/admin/notifications', { cache: 'no-store' });
-        if (!res.ok) return;
+        if (!res.ok) {
+          setNotificationDegraded(true);
+          return;
+        }
         const data = (await res.json()) as { newLeads?: number; inboundMessages?: number };
         if (!active) return;
+        setNotificationDegraded(Boolean((data as { degraded?: boolean }).degraded));
         setNotifications({
           newLeads: data.newLeads ?? 0,
           inboundMessages: data.inboundMessages ?? 0,
         });
       } catch {
-        // Keep shell resilient even if notification endpoint is unavailable.
+        if (!active) return;
+        setNotificationDegraded(true);
       }
     }
 
@@ -71,6 +77,13 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
         <div className="p-6 border-b border-brand-border/40">
           <p className="font-display font-bold text-white">{t('title')}</p>
           <p className="text-xs text-brand-accent mt-1">IMPULCIA AFRIQUE</p>
+          {notificationDegraded ? (
+            <p className="mt-2 text-[10px] text-brand-muted">
+              {locale === 'fr'
+                ? 'Notifications temporaires indisponibles'
+                : 'Notifications are temporarily unavailable'}
+            </p>
+          ) : null}
         </div>
         <nav className="flex-1 p-4 space-y-1">
           {navItems.map((item) => {

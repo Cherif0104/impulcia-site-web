@@ -57,6 +57,8 @@ export default async function ClientSpacePage({
 
   async function createClientRequestAction(formData: FormData) {
     'use server';
+    const currentSession = await readClientSession();
+    if (!currentSession) return;
     const workspaceIdValue = String(formData.get('workspaceId') || '').trim();
     const organizationIdValue = String(formData.get('organizationId') || '').trim();
     const title = String(formData.get('title') || '').trim();
@@ -70,8 +72,8 @@ export default async function ClientSpacePage({
       !organizationIdValue ||
       !title ||
       !description ||
-      !session.workspaceIds.includes(workspaceIdValue) ||
-      !session.organizationIds.includes(organizationIdValue)
+      !currentSession.workspaceIds.includes(workspaceIdValue) ||
+      !currentSession.organizationIds.includes(organizationIdValue)
     ) {
       return;
     }
@@ -81,7 +83,7 @@ export default async function ClientSpacePage({
       organizationId: organizationIdValue,
       title,
       description,
-      createdByEmail: session.email,
+      createdByEmail: currentSession.email,
       priority,
     });
     redirect(`/${locale}/client-space?workspaceId=${workspaceIdValue}`);
@@ -89,14 +91,16 @@ export default async function ClientSpacePage({
 
   async function createClientInteractionAction(formData: FormData) {
     'use server';
+    const currentSession = await readClientSession();
+    if (!currentSession) return;
     const requestId = String(formData.get('requestId') || '').trim();
     const workspaceIdValue = String(formData.get('workspaceId') || '').trim();
     const body = String(formData.get('body') || '').trim();
-    if (!requestId || !workspaceIdValue || !body || !session.workspaceIds.includes(workspaceIdValue)) return;
+    if (!requestId || !workspaceIdValue || !body || !currentSession.workspaceIds.includes(workspaceIdValue)) return;
 
     const existing = await listServiceRequests({
       workspaceId: workspaceIdValue,
-      createdByEmail: session.email,
+      createdByEmail: currentSession.email,
     });
     if (!existing.some((item) => item.id === requestId)) return;
 

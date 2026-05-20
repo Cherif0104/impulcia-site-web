@@ -1,7 +1,16 @@
 export { clientSpaceMetadata as generateMetadata } from '@/src/lib/seo/pages';
 
 import { cookies } from 'next/headers';
+import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import ClientShell from '@/src/components/crm/ClientShell';
+import {
+  REQUEST_PRIORITIES,
+  REQUEST_STATUSES,
+  interactionAuthorLabel,
+  requestPriorityLabel,
+  requestStatusLabel,
+} from '@/src/lib/crm-labels';
 import {
   createRequestInteraction,
   createServiceRequest,
@@ -11,6 +20,7 @@ import {
   listWorkspaces,
 } from '@/src/lib/db';
 import { CLIENT_COOKIE, readClientSession } from '@/src/lib/client-auth';
+import type { RequestStatus } from '@/src/types/crm';
 
 export default async function ClientSpacePage({
   params,
@@ -30,8 +40,8 @@ export default async function ClientSpacePage({
   const requestedWorkspaceId = typeof query.workspaceId === 'string' ? query.workspaceId.trim() : '';
   const status =
     typeof query.status === 'string' &&
-    ['new', 'triaged', 'in_progress', 'blocked', 'done'].includes(query.status)
-      ? query.status
+    REQUEST_STATUSES.includes(query.status as RequestStatus)
+      ? (query.status as RequestStatus)
       : '';
 
   const [organizations, workspaces] = await Promise.all([listOrganizations(), listWorkspaces()]);
@@ -41,21 +51,26 @@ export default async function ClientSpacePage({
     ? requestedWorkspaceId
     : allowedWorkspaces[0]?.id || '';
   const selectedWorkspace = workspaceId ? workspaces.find((item) => item.id === workspaceId) : null;
-  const email = session.email;
 
-  const requests =
-    workspaceId
-      ? await listServiceRequests({
-          workspaceId,
-          status: (status || undefined) as 'new' | 'triaged' | 'in_progress' | 'blocked' | 'done' | undefined,
-          createdByEmail: email,
-        })
-      : [];
+  const allClientRequests = workspaceId
+    ? await listServiceRequests({
+        workspaceId,
+        createdByEmail: session.email,
+      })
+    : [];
+
+  const requests = status
+    ? allClientRequests.filter((item) => item.status === status)
+    : allClientRequests;
 
   const interactionsEntries = await Promise.all(
     requests.map(async (request) => [request.id, await listRequestInteractions(request.id)] as const)
   );
   const interactionsByRequest = Object.fromEntries(interactionsEntries);
+
+  const openCount = allClientRequests.filter((item) => item.status !== 'done').length;
+  const inProgressCount = allClientRequests.filter((item) => item.status === 'in_progress').length;
+  const doneCount = allClientRequests.filter((item) => item.status === 'done').length;
 
   async function createClientRequestAction(formData: FormData) {
     'use server';
@@ -127,46 +142,94 @@ export default async function ClientSpacePage({
     redirect(`/${locale}/client/login`);
   }
 
+  const logoutButton = (
+    <form action={logoutAction}>
+      <button
+        type="submit"
+        className="rounded-lg border border-brand-border/60 px-3 py-1.5 text-xs text-brand-muted hover:text-white transition"
+      >
+        {isFr ? 'Déconnexion' : 'Sign out'}
+      </button>
+    </form>
+  );
+
+  if (allowedWorkspaces.length === 0) {
+    return (
+      <ClientShell locale={locale} email={session.email} logoutAction={logoutButton}>
+        <div className="glass-panel rounded-2xl border border-brand-border/50 p-8 text-center">
+          <h1 className="font-display text-2xl font-bold text-white">
+            {isFr ? 'Espace non configuré' : 'Workspace not configured'}
+          </h1>
+          <p className="mt-4 text-sm text-brand-muted">
+            {isFr
+              ? 'Votre compte client n’est associé à aucun espace de travail. Contactez votre interlocuteur IMPULCIA pour activer l’accès.'
+              : 'Your client account is not linked to any workspace yet. Contact your IMPULCIA representative to enable access.'}
+          </p>
+        </div>
+      </ClientShell>
+    );
+  }
+
   return (
-    <div className="pt-24 pb-20 bg-[var(--page-bg)] text-[var(--text-main)]">
-      <section className="section-container space-y-6">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-brand-border dark:bg-brand-panel/40">
+    <ClientShell locale={locale} email={session.email} logoutAction={logoutButton}>
+      <div className="space-y-6">
+        <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">
             {isFr ? 'Espace client' : 'Client workspace'}
           </p>
-          <div className="mt-2 flex items-center justify-between gap-4">
-            <p className="text-xs text-brand-muted">{session.email}</p>
-            <form action={logoutAction}>
-              <button
-                type="submit"
-                className="rounded-lg border border-brand-border/60 px-3 py-1.5 text-xs text-brand-muted hover:text-white"
-              >
-                {isFr ? 'Déconnexion' : 'Sign out'}
-              </button>
-            </form>
-          </div>
-          <h1 className="mt-4 font-display text-4xl font-bold text-slate-900 dark:text-white">
-            {isFr ? 'Demandes et suivi de mission' : 'Requests and mission tracking'}
+          <h1 className="mt-2 font-display text-3xl font-bold text-white">
+            {isFr ? 'Demandes et suivi' : 'Requests and tracking'}
           </h1>
-          <p className="mt-4 text-sm text-slate-600 dark:text-brand-muted">
+          <p className="mt-2 text-sm text-brand-muted">
             {isFr
-              ? 'Déposez vos demandes, suivez leurs statuts et échangez avec l équipe delivery.'
+              ? 'Déposez vos demandes, suivez leurs statuts et échangez avec l’équipe delivery.'
               : 'Submit requests, track statuses and interact with the delivery team.'}
           </p>
+          {selectedWorkspace ? (
+            <p className="mt-2 text-xs text-brand-muted">
+              {isFr ? 'Espace actif :' : 'Active workspace:'}{' '}
+              <span className="text-white">{selectedWorkspace.name}</span>
+            </p>
+          ) : null}
         </div>
 
-        <form className="rounded-2xl border border-brand-border/60 bg-white p-5 dark:bg-brand-panel/30">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            {isFr ? 'Filtrer mon espace' : 'Filter my workspace'}
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              label: isFr ? 'Demandes ouvertes' : 'Open requests',
+              value: openCount,
+            },
+            {
+              label: isFr ? 'En cours' : 'In progress',
+              value: inProgressCount,
+            },
+            {
+              label: isFr ? 'Terminées' : 'Completed',
+              value: doneCount,
+            },
+          ].map((card) => (
+            <div key={card.label} className="glass-panel rounded-xl border border-brand-border/50 p-5">
+              <p className="text-xs text-brand-muted uppercase tracking-wider">{card.label}</p>
+              <p className="text-3xl font-bold text-white mt-2">{card.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <form
+          method="get"
+          action={`/${locale}/client-space`}
+          className="glass-panel rounded-xl border border-brand-border/50 p-5"
+        >
+          <h2 className="text-lg font-semibold text-white">
+            {isFr ? 'Filtrer mes demandes' : 'Filter my requests'}
           </h2>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <select
               name="workspaceId"
               defaultValue={workspaceId}
               required
-              className="rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+              className="rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
             >
-              <option value="">{isFr ? 'Sélectionner un espace' : 'Select workspace'}</option>
               {allowedWorkspaces.map((workspace) => (
                 <option key={workspace.id} value={workspace.id}>
                   {workspace.name}
@@ -176,14 +239,14 @@ export default async function ClientSpacePage({
             <select
               name="status"
               defaultValue={status}
-              className="rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+              className="rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
             >
               <option value="">{isFr ? 'Tous les statuts' : 'All statuses'}</option>
-              <option value="new">new</option>
-              <option value="triaged">triaged</option>
-              <option value="in_progress">in_progress</option>
-              <option value="blocked">blocked</option>
-              <option value="done">done</option>
+              {REQUEST_STATUSES.map((item) => (
+                <option key={item} value={item}>
+                  {requestStatusLabel(item, isFr)}
+                </option>
+              ))}
             </select>
             <button
               type="submit"
@@ -192,23 +255,28 @@ export default async function ClientSpacePage({
               {isFr ? 'Afficher' : 'Show'}
             </button>
           </div>
+          {status ? (
+            <Link
+              href={`/${locale}/client-space?workspaceId=${workspaceId}`}
+              className="inline-block mt-3 text-xs text-brand-accent hover:text-brand-accent-hover"
+            >
+              {isFr ? 'Réinitialiser le filtre statut' : 'Clear status filter'}
+            </Link>
+          ) : null}
         </form>
 
         <form
           action={createClientRequestAction}
-          className="rounded-2xl border border-brand-border/60 bg-white p-5 space-y-3 dark:bg-brand-panel/30"
+          className="glass-panel rounded-xl border border-brand-border/50 p-5 space-y-3"
         >
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            {isFr ? 'Nouvelle demande' : 'New request'}
-          </h2>
+          <h2 className="text-lg font-semibold text-white">{isFr ? 'Nouvelle demande' : 'New request'}</h2>
           <div className="grid gap-3 md:grid-cols-3">
             <select
               name="workspaceId"
               required
               defaultValue={workspaceId}
-              className="rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+              className="rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
             >
-              <option value="">{isFr ? 'Workspace' : 'Workspace'}</option>
               {allowedWorkspaces.map((workspace) => (
                 <option key={workspace.id} value={workspace.id}>
                   {workspace.name}
@@ -219,7 +287,7 @@ export default async function ClientSpacePage({
               name="organizationId"
               required
               defaultValue={selectedWorkspace?.organization_id ?? ''}
-              className="rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+              className="rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
             >
               <option value="">{isFr ? 'Organisation' : 'Organization'}</option>
               {allowedOrganizations.map((organization) => (
@@ -231,26 +299,27 @@ export default async function ClientSpacePage({
             <select
               name="priority"
               defaultValue="medium"
-              className="rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+              className="rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
             >
-              <option value="low">low</option>
-              <option value="medium">medium</option>
-              <option value="high">high</option>
-              <option value="critical">critical</option>
+              {REQUEST_PRIORITIES.map((item) => (
+                <option key={item} value={item}>
+                  {requestPriorityLabel(item, isFr)}
+                </option>
+              ))}
             </select>
           </div>
           <input
             name="title"
             required
             placeholder={isFr ? 'Titre de la demande' : 'Request title'}
-            className="w-full rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+            className="w-full rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
           />
           <textarea
             name="description"
             required
             rows={4}
             placeholder={isFr ? 'Décrivez votre besoin' : 'Describe your need'}
-            className="w-full rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+            className="w-full rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
           />
           <button type="submit" className="rounded-lg bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-navy">
             {isFr ? 'Envoyer la demande' : 'Submit request'}
@@ -261,29 +330,44 @@ export default async function ClientSpacePage({
           {requests.map((request) => (
             <article
               key={request.id}
-              className="rounded-2xl border border-brand-border/60 bg-white p-5 shadow-sm dark:bg-brand-panel/20"
+              className="glass-panel rounded-xl border border-brand-border/50 p-5"
             >
-              <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white">{request.title}</h3>
+                  <h3 className="font-semibold text-white">{request.title}</h3>
                   <p className="text-xs text-brand-muted mt-1">
-                    {request.status} · {request.priority} · {new Date(request.updated_at).toLocaleString()}
+                    {requestStatusLabel(request.status, isFr)} ·{' '}
+                    {requestPriorityLabel(request.priority, isFr)} ·{' '}
+                    {new Date(request.updated_at).toLocaleString(isFr ? 'fr-FR' : 'en-GB')}
                   </p>
                 </div>
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
+                    request.status === 'done'
+                      ? 'bg-emerald-500/15 text-emerald-300'
+                      : request.status === 'blocked'
+                        ? 'bg-red-500/15 text-red-300'
+                        : 'bg-brand-accent/15 text-brand-accent'
+                  }`}
+                >
+                  {requestStatusLabel(request.status, isFr)}
+                </span>
               </div>
               {request.description ? (
-                <p className="mt-3 text-sm text-slate-600 dark:text-brand-muted whitespace-pre-wrap">
-                  {request.description}
-                </p>
+                <p className="mt-3 text-sm text-slate-300 whitespace-pre-wrap">{request.description}</p>
               ) : null}
 
               <div className="mt-4 space-y-2">
                 {(interactionsByRequest[request.id] ?? []).map((interaction) => (
                   <p
                     key={interaction.id}
-                    className="rounded-lg border border-brand-border/40 px-3 py-2 text-sm text-slate-700 dark:text-slate-200"
+                    className="rounded-lg border border-brand-border/40 bg-brand-panel/20 px-3 py-2 text-sm text-slate-200"
                   >
-                    <span className="font-semibold">{interaction.author_type}</span> — {interaction.body}
+                    <span className="font-semibold text-brand-accent">
+                      {interactionAuthorLabel(interaction.author_type, isFr)}
+                    </span>
+                    {' — '}
+                    {interaction.body}
                   </p>
                 ))}
               </div>
@@ -295,11 +379,11 @@ export default async function ClientSpacePage({
                   name="body"
                   required
                   placeholder={isFr ? 'Ajouter un commentaire' : 'Add comment'}
-                  className="flex-1 rounded-lg border border-brand-border/60 bg-brand-panel/10 px-3 py-2 text-sm text-slate-800 dark:text-white"
+                  className="flex-1 rounded-lg border border-brand-border/60 bg-brand-panel/30 px-3 py-2 text-sm text-white"
                 />
                 <button
                   type="submit"
-                  className="rounded-lg border border-brand-border/60 px-3 py-2 text-xs text-brand-muted hover:text-white"
+                  className="rounded-lg border border-brand-border/60 px-3 py-2 text-xs text-brand-muted hover:text-white transition"
                 >
                   {isFr ? 'Commenter' : 'Comment'}
                 </button>
@@ -309,11 +393,19 @@ export default async function ClientSpacePage({
         </div>
 
         {workspaceId && requests.length === 0 ? (
-          <p className="text-sm text-brand-muted">
-            {isFr ? 'Aucune demande trouvée pour ce filtre.' : 'No request found for this filter.'}
-          </p>
+          <div className="glass-panel rounded-xl border border-dashed border-brand-border/60 p-8 text-center">
+            <p className="text-sm text-brand-muted">
+              {status
+                ? isFr
+                  ? 'Aucune demande ne correspond à ce filtre.'
+                  : 'No request matches this filter.'
+                : isFr
+                  ? 'Vous n’avez pas encore de demande sur cet espace. Utilisez le formulaire ci-dessus pour en créer une.'
+                  : 'You have no requests on this workspace yet. Use the form above to create one.'}
+            </p>
+          </div>
         ) : null}
-      </section>
-    </div>
+      </div>
+    </ClientShell>
   );
 }

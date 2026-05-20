@@ -1,0 +1,16 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0B1220"/>
+  <rect x="84" y="84" width="1432" height="732" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="178" fill="#14B8A6" font-size="26" font-family="Inter, Arial, sans-serif" font-weight="700">PORTEFEUILLE PRODUITS</text>
+  <text x="150" y="238" fill="#F8FAFC" font-size="52" font-family="Inter, Arial, sans-serif" font-weight="800">COYA, PATRIMO, SENTRAJET, SUNUGEST, MBOURAKE</text>
+  <g fill="#0F172A" stroke="#334155">
+    <rect x="150" y="302" width="250" height="210" rx="20"/>
+    <rect x="430" y="302" width="250" height="210" rx="20"/>
+    <rect x="710" y="302" width="250" height="210" rx="20"/>
+    <rect x="990" y="302" width="250" height="210" rx="20"/>
+    <rect x="1270" y="302" width="180" height="210" rx="20"/>
+  </g>
+  <rect x="150" y="560" width="1300" height="180" rx="20" fill="#0B1220" stroke="#14B8A6" stroke-opacity="0.4"/>
+  <text x="190" y="626" fill="#E2E8F0" font-size="30" font-family="Inter, Arial, sans-serif" font-weight="700">Cas d'usage et valeur métier</text>
+  <text x="190" y="676" fill="#94A3B8" font-size="22" font-family="Inter, Arial, sans-serif">Visuel de section pour réduire le rendu textuel des cartes produits.</text>
+</svg>

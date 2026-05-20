@@ -1,8 +1,11 @@
+import Image from 'next/image';
 import Button from '@/src/components/ui/Button';
 import WhatsAppButton from '@/src/components/forms/WhatsAppButton';
+import { getEnterpriseSectionVisual } from '@/src/lib/media';
 
 type ServiceOfferPageProps = {
   locale: string;
+  visualKey?: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -15,6 +18,7 @@ type ServiceOfferPageProps = {
 
 export default function ServiceOfferPage({
   locale,
+  visualKey = 'serviceOffer',
   eyebrow,
   title,
   subtitle,
@@ -47,6 +51,21 @@ export default function ServiceOfferPage({
               {isFr ? 'Demander un diagnostic' : 'Request a diagnostic'}
             </Button>
           </div>
+        </div>
+
+        <div className="relative overflow-hidden rounded-2xl border border-brand-border/50 bg-brand-panel/40 aspect-[16/6] mb-8">
+          <Image
+            src={getEnterpriseSectionVisual(visualKey)}
+            alt={
+              isFr
+                ? `Illustration de l'offre ${title}`
+                : `${title} service offer illustration`
+            }
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy/30 via-transparent to-transparent" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 mb-6">

@@ -1,5 +1,16 @@
 const MIN_SECRET_LENGTH = 32;
 const DEV_CLIENT_FALLBACK = 'impulcia-dev-client-secret';
+const DEV_ADMIN_FALLBACK = 'impulcia-dev-admin-secret-min-32-ch';
+
+let warnedAdminDevFallback = false;
+
+function warnAdminDevFallbackOnce(): void {
+  if (warnedAdminDevFallback || isProductionEnv()) return;
+  warnedAdminDevFallback = true;
+  console.warn(
+    '[IMPULCIA CRM] ADMIN_SECRET absent — mot de passe admin dev par défaut (voir DEV_ADMIN_FALLBACK dans src/lib/env.ts). Définissez ADMIN_SECRET dans .env.local pour la prod.'
+  );
+}
 
 export type EnvCheck = {
   key: string;
@@ -111,6 +122,18 @@ export function assertProductionEnv(): void {
   throw new Error(`Production environment misconfigured: ${failed.join('; ')}`);
 }
 
+export function getAdminSecretForRuntime(): string | undefined {
+  const explicit = trim(process.env.ADMIN_SECRET || process.env.ADMIN_PASSWORD);
+  if (explicit) return explicit;
+
+  if (isProductionEnv()) {
+    return undefined;
+  }
+
+  warnAdminDevFallbackOnce();
+  return DEV_ADMIN_FALLBACK;
+}
+
 export function getClientAuthSecretForRuntime(): string {
   const explicit = trim(process.env.CLIENT_AUTH_SECRET);
   if (explicit) return explicit;
@@ -125,4 +148,4 @@ export function getClientAuthSecretForRuntime(): string {
   return DEV_CLIENT_FALLBACK;
 }
 
-export { DEV_CLIENT_FALLBACK, MIN_SECRET_LENGTH };
+export { DEV_ADMIN_FALLBACK, DEV_CLIENT_FALLBACK, MIN_SECRET_LENGTH };

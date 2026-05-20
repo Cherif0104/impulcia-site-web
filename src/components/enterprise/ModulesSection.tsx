@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionHeading from '@/src/components/ui/SectionHeading';
+import SectionVisual from './SectionVisual';
 
 type Tab = { id: string; label: string; items: string[] };
 
@@ -41,6 +42,12 @@ export default function ModulesSection() {
             exit={{ opacity: 0, y: -8 }}
             className="glass-panel rounded-2xl p-8 max-w-3xl mx-auto"
           >
+            <SectionVisual
+              visualKey="modules"
+              alt="Paysage fonctionnel des modules ERP"
+              className="mb-6 aspect-[16/8]"
+              sizes="(max-width: 1024px) 100vw, 768px"
+            />
             <h3 className="text-2xl font-bold text-white mb-6 text-center">{current?.label}</h3>
             <ul className="grid sm:grid-cols-2 gap-3">
               {current?.items.map((item) => (

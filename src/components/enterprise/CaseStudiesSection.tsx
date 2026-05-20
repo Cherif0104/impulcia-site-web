@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/src/components/ui/SectionHeading';
+import SectionVisual from './SectionVisual';
 
 type CaseStudy = {
   id: string;
@@ -24,6 +25,12 @@ export default function CaseStudiesSection() {
     <section id="case-studies" className="py-24 bg-brand-slate/20">
       <div className="section-container">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <SectionVisual
+          visualKey="caseStudies"
+          alt={isFr ? "Schéma d'impacts de cas clients IMPULCIA" : 'IMPULCIA case studies impact visual'}
+          className="mb-8 aspect-[16/6]"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
         <div className="grid lg:grid-cols-3 gap-6">
           {studies.map((study, i) => (
             <motion.article

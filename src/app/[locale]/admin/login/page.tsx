@@ -25,7 +25,11 @@ export default function AdminLoginPage() {
 
     setLoading(false);
     if (!res.ok) {
-      setError(t('invalidPassword'));
+      const body = (await res.json().catch(() => null)) as { error?: string; hint?: string } | null;
+      const serverMessage = [body?.error, body?.hint].filter(Boolean).join(' — ');
+      setError(
+        serverMessage || (res.status === 401 ? t('invalidPassword') : t('loginUnavailable'))
+      );
       return;
     }
     router.push(`/${locale}/admin`);

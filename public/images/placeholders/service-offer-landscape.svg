@@ -1,0 +1,23 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071527" />
+      <stop offset="1" stop-color="#15355B" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <rect x="140" y="140" width="1320" height="620" rx="34" fill="#0B203A" stroke="#2D5A84" />
+  <path d="M260 600L520 380L720 500L980 320L1240 440" stroke="#4FD1C5" stroke-width="8" stroke-linecap="round" />
+  <circle cx="260" cy="600" r="14" fill="#4FD1C5" />
+  <circle cx="520" cy="380" r="14" fill="#4FD1C5" />
+  <circle cx="720" cy="500" r="14" fill="#4FD1C5" />
+  <circle cx="980" cy="320" r="14" fill="#4FD1C5" />
+  <circle cx="1240" cy="440" r="14" fill="#4FD1C5" />
+  <g fill="#D8EDFF" font-family="Arial, sans-serif" font-size="24" font-weight="600">
+    <text x="225" y="655">Audit</text>
+    <text x="470" y="345">Scoping</text>
+    <text x="680" y="555">Architecture</text>
+    <text x="935" y="285">Execution</text>
+    <text x="1175" y="495">Optimization</text>
+  </g>
+</svg>

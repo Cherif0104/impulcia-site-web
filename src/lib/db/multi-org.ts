@@ -192,8 +192,33 @@ type ServiceRequestFilters = {
   workspaceId?: string;
   organizationId?: string;
   status?: RequestStatus;
+  priority?: RequestPriority;
   createdByEmail?: string;
 };
+
+function applyServiceRequestFilters(
+  rows: ServiceRequest[],
+  filters: ServiceRequestFilters
+): ServiceRequest[] {
+  let result = rows;
+  if (filters.workspaceId) {
+    result = result.filter((item) => item.workspace_id === filters.workspaceId);
+  }
+  if (filters.organizationId) {
+    result = result.filter((item) => item.organization_id === filters.organizationId);
+  }
+  if (filters.status) {
+    result = result.filter((item) => item.status === filters.status);
+  }
+  if (filters.priority) {
+    result = result.filter((item) => item.priority === filters.priority);
+  }
+  if (filters.createdByEmail) {
+    const email = filters.createdByEmail.trim().toLowerCase();
+    result = result.filter((item) => item.created_by_email?.toLowerCase() === email);
+  }
+  return result.sort((a, b) => b.updated_at.localeCompare(a.updated_at));
+}
 
 export async function listServiceRequests(
   filters?: string | ServiceRequestFilters
@@ -201,7 +226,7 @@ export async function listServiceRequests(
   const resolvedFilters: ServiceRequestFilters =
     typeof filters === 'string' ? { workspaceId: filters } : filters ?? {};
   if (shouldUseMemory()) {
-    return memoryStore.requests.list(resolvedFilters.workspaceId);
+    return applyServiceRequestFilters(memoryStore.requests.list(), resolvedFilters);
   }
   const supabase = getSupabaseAdmin()!;
   let query = supabase
@@ -211,6 +236,7 @@ export async function listServiceRequests(
   if (resolvedFilters.workspaceId) query = query.eq('workspace_id', resolvedFilters.workspaceId);
   if (resolvedFilters.organizationId) query = query.eq('organization_id', resolvedFilters.organizationId);
   if (resolvedFilters.status) query = query.eq('status', resolvedFilters.status);
+  if (resolvedFilters.priority) query = query.eq('priority', resolvedFilters.priority);
   if (resolvedFilters.createdByEmail) {
     query = query.eq('created_by_email', resolvedFilters.createdByEmail.trim().toLowerCase());
   }

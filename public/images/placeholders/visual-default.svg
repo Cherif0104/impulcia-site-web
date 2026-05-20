@@ -1,0 +1,23 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#141D2F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="320" y1="220" x2="1280" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#D4A853" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1440" height="740" rx="32" fill="url(#accent)" stroke="#334155" stroke-width="2"/>
+  <rect x="140" y="140" width="1320" height="620" rx="24" fill="#0F172A" stroke="#1E293B"/>
+  <text x="180" y="210" fill="#14B8A6" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="700">IMAGES IMPULCIA</text>
+  <text x="180" y="260" fill="#E2E8F0" font-size="48" font-family="Inter, Arial, sans-serif" font-weight="800">Visuel de fallback sécurisé</text>
+  <text x="180" y="320" fill="#94A3B8" font-size="24" font-family="Inter, Arial, sans-serif">Version placeholder, cohérente avec la charte dark B2B.</text>
+  <rect x="180" y="380" width="420" height="220" rx="18" fill="#111827" stroke="#334155"/>
+  <rect x="640" y="380" width="780" height="54" rx="12" fill="#0B1220" stroke="#14B8A6" stroke-opacity="0.45"/>
+  <rect x="640" y="456" width="640" height="54" rx="12" fill="#0B1220" stroke="#334155"/>
+  <rect x="640" y="532" width="720" height="54" rx="12" fill="#0B1220" stroke="#334155"/>
+  <rect x="640" y="608" width="520" height="54" rx="12" fill="#0B1220" stroke="#334155"/>
+</svg>

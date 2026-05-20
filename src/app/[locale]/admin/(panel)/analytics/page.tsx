@@ -1,7 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { getAnalyticsSummary } from '@/src/lib/db';
 
-export default async function AdminAnalyticsPage() {
+export default async function AdminAnalyticsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const isFr = locale === 'fr';
   const t = await getTranslations('crm.admin.analytics');
   try {
     const stats = await getAnalyticsSummary();
@@ -16,22 +22,26 @@ export default async function AdminAnalyticsPage() {
             <p className="text-2xl font-bold text-white mt-1">{stats.totalPageViews}</p>
           </div>
           <div className="glass-panel rounded-xl p-5">
-            <p className="text-xs text-brand-muted">Sessions</p>
+            <p className="text-xs text-brand-muted">{isFr ? 'Sessions' : 'Sessions'}</p>
             <p className="text-2xl font-bold text-white mt-1">{stats.uniqueSessions}</p>
           </div>
         </div>
-        <h2 className="text-lg font-semibold text-white mb-4">Funnel conversion</h2>
+        <h2 className="text-lg font-semibold text-white mb-4">
+          {isFr ? 'Entonnoir de conversion' : 'Conversion funnel'}
+        </h2>
         <div className="grid sm:grid-cols-3 gap-4 mb-8">
           <div className="glass-panel rounded-xl p-5">
-            <p className="text-xs text-brand-muted">CTA clicks</p>
+            <p className="text-xs text-brand-muted">{isFr ? 'Clics CTA' : 'CTA clicks'}</p>
             <p className="text-2xl font-bold text-white mt-1">{stats.funnel?.ctaClicks ?? 0}</p>
           </div>
           <div className="glass-panel rounded-xl p-5">
-            <p className="text-xs text-brand-muted">Lead forms submitted</p>
+            <p className="text-xs text-brand-muted">
+              {isFr ? 'Formulaires leads envoyés' : 'Lead forms submitted'}
+            </p>
             <p className="text-2xl font-bold text-white mt-1">{stats.funnel?.formSubmits ?? 0}</p>
           </div>
           <div className="glass-panel rounded-xl p-5">
-            <p className="text-xs text-brand-muted">Meeting intents</p>
+            <p className="text-xs text-brand-muted">{isFr ? 'Intentions de rendez-vous' : 'Meeting intents'}</p>
             <p className="text-2xl font-bold text-white mt-1">{stats.funnel?.meetingsBooked ?? 0}</p>
           </div>
         </div>
@@ -50,7 +60,7 @@ export default async function AdminAnalyticsPage() {
             <li className="text-brand-muted text-sm">Aucune donnée analytics collectée.</li>
           )}
         </ul>
-        <h2 className="text-lg font-semibold text-white mt-10 mb-4">Events</h2>
+        <h2 className="text-lg font-semibold text-white mt-10 mb-4">{isFr ? 'Événements' : 'Events'}</h2>
         <ul className="space-y-2">
           {Object.entries(stats.eventsByName ?? {}).map(([name, count]) => (
             <li
@@ -65,7 +75,9 @@ export default async function AdminAnalyticsPage() {
             <li className="text-brand-muted text-sm">Aucun événement funnel collecté.</li>
           )}
         </ul>
-        <h2 className="text-lg font-semibold text-white mt-10 mb-4">Funnel par canal</h2>
+        <h2 className="text-lg font-semibold text-white mt-10 mb-4">
+          {isFr ? 'Entonnoir par canal' : 'Funnel by channel'}
+        </h2>
         <ul className="space-y-2">
           {Object.entries(
             (stats.funnelByChannel ?? {}) as Record<

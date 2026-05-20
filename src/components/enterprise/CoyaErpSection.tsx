@@ -1,11 +1,14 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/src/components/ui/SectionHeading';
+import SectionVisual from './SectionVisual';
 
 export default function CoyaErpSection() {
   const t = useTranslations('enterprise.coya');
+  const locale = useLocale();
   const pillars = t.raw('pillars') as { title: string; description: string }[];
   const capabilities = t.raw('capabilities') as string[];
 
@@ -14,6 +17,12 @@ export default function CoyaErpSection() {
       <div className="absolute inset-0 bg-hero-glow opacity-50" />
       <div className="section-container relative">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <SectionVisual
+          visualKey="coya"
+          alt={locale === 'fr' ? "Vue d'ensemble COYA ERP et ses flux métiers" : 'COYA ERP overview and business flows'}
+          className="mb-8 aspect-[16/6]"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {pillars.map((p, i) => (
             <motion.div

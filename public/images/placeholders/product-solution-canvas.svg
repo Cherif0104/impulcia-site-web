@@ -1,0 +1,25 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426" />
+      <stop offset="1" stop-color="#153A60" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <rect x="140" y="120" width="1320" height="660" rx="36" fill="#0D243F" stroke="#2E5F8B" />
+  <rect x="210" y="210" width="460" height="500" rx="22" fill="#163B62" stroke="#3D78AA" />
+  <rect x="710" y="210" width="680" height="150" rx="20" fill="#163B62" stroke="#3D78AA" />
+  <rect x="710" y="390" width="680" height="150" rx="20" fill="#163B62" stroke="#3D78AA" />
+  <rect x="710" y="570" width="680" height="140" rx="20" fill="#163B62" stroke="#3D78AA" />
+  <g fill="#E5F5FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    <text x="250" y="280">Solution Brief</text>
+    <text x="760" y="300">Core capabilities</text>
+    <text x="760" y="480">Target use cases</text>
+    <text x="760" y="650">Business outcomes</text>
+  </g>
+  <g fill="#A7C9E8" font-family="Arial, sans-serif" font-size="20">
+    <text x="250" y="330">Vision " Methodology " Delivery</text>
+    <text x="250" y="370">Impact metrics " Governance</text>
+    <text x="250" y="410">Implementation sequencing</text>
+  </g>
+</svg>

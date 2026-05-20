@@ -1,0 +1,18 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0B1220"/>
+  <rect x="86" y="86" width="1428" height="728" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="184" fill="#14B8A6" font-size="26" font-family="Inter, Arial, sans-serif" font-weight="700">METHODOLOGIE</text>
+  <text x="150" y="246" fill="#F8FAFC" font-size="52" font-family="Inter, Arial, sans-serif" font-weight="800">Roadmap de delivery en 5 etapes</text>
+  <line x1="190" y1="470" x2="1410" y2="470" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <g>
+    <circle cx="260" cy="470" r="44" fill="#14B8A6"/><circle cx="550" cy="470" r="44" fill="#14B8A6"/><circle cx="840" cy="470" r="44" fill="#14B8A6"/><circle cx="1130" cy="470" r="44" fill="#14B8A6"/><circle cx="1380" cy="470" r="44" fill="#14B8A6"/>
+  </g>
+  <g fill="#E2E8F0" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">
+    <text x="238" y="476">1</text><text x="528" y="476">2</text><text x="818" y="476">3</text><text x="1108" y="476">4</text><text x="1358" y="476">5</text>
+  </g>
+  <text x="196" y="570" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif">Diagnostic</text>
+  <text x="470" y="570" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif">Cadrage</text>
+  <text x="770" y="570" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif">Execution</text>
+  <text x="1046" y="570" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif">Adoption</text>
+  <text x="1316" y="570" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif">Optimisation</text>
+</svg>

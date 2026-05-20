@@ -45,11 +45,18 @@ if (turboAlias) {
     Object.keys(experimentalRest).length > 0 ? experimentalRest : undefined;
 }
 
-module.exports = withSentryConfig(config, {
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
-  silent: !process.env.CI,
-  widenClientFileUpload: true,
-  hideSourceMaps: true,
-  telemetry: false,
-});
+const shouldEnableSentryBuild =
+  Boolean(process.env.SENTRY_AUTH_TOKEN) &&
+  Boolean(process.env.SENTRY_ORG) &&
+  Boolean(process.env.SENTRY_PROJECT);
+
+module.exports = shouldEnableSentryBuild
+  ? withSentryConfig(config, {
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      silent: !process.env.CI,
+      widenClientFileUpload: true,
+      hideSourceMaps: true,
+      telemetry: false,
+    })
+  : config;

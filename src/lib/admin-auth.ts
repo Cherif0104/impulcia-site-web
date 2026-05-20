@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import { createHash, timingSafeEqual } from 'crypto';
 import type { NextRequest } from 'next/server';
+import { getAdminSecretForRuntime } from '@/src/lib/env';
 
 export const ADMIN_COOKIE = 'impulcia_admin_session';
 export const ADMIN_ROLE_COOKIE = 'impulcia_admin_role';
@@ -19,7 +20,7 @@ const ROLE_RANK: Record<string, number> = {
 };
 
 export function getAdminSecret(): string | undefined {
-  return process.env.ADMIN_SECRET || process.env.ADMIN_PASSWORD;
+  return getAdminSecretForRuntime();
 }
 
 export function hashToken(secret: string): string {

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/src/components/ui/SectionHeading';
+import SectionVisual from './SectionVisual';
 
 export default function MethodologySection() {
   const t = useTranslations('enterprise.methodology');
@@ -12,6 +13,12 @@ export default function MethodologySection() {
     <section id="methodology" className="py-24 bg-brand-slate/20">
       <div className="section-container">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} />
+        <SectionVisual
+          visualKey="methodology"
+          alt="Roadmap en cinq étapes pour les missions de transformation"
+          className="mb-8 aspect-[16/6]"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
         <div className="grid md:grid-cols-5 gap-4">
           {steps.map((step, i) => (
             <motion.div

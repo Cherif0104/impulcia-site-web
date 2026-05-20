@@ -13,6 +13,7 @@ export default async function ArchitecteSiPage({
   return (
     <ServiceOfferPage
       locale={locale}
+      visualKey="serviceArchitecture"
       eyebrow={isFr ? 'Architecte systèmes d\'information' : 'Information systems architect'}
       title={isFr ? 'Échangez avec un architecte systèmes d\'information senior' : 'Talk with a senior information systems architect'}
       subtitle={

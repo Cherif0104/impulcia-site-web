@@ -13,6 +13,7 @@ export default async function AuditSiPage({
   return (
     <ServiceOfferPage
       locale={locale}
+      visualKey="serviceAudit"
       eyebrow={isFr ? 'Audit système d\'information' : 'Information system audit'}
       title={isFr ? "Mesurez la maturité de votre système d'information" : 'Measure your information system maturity'}
       subtitle={

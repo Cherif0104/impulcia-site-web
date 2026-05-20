@@ -8,8 +8,9 @@ import CrmClientProviders from '@/src/components/crm/CrmClientProviders';
 export default function AppChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdmin = /^\/(fr|en)\/admin(\/|$)/.test(pathname || '');
+  const isClientPortal = /^\/(fr|en)\/(client-space|client\/login)(\/|$)/.test(pathname || '');
 
-  if (isAdmin) {
+  if (isAdmin || isClientPortal) {
     return <main>{children}</main>;
   }
 

@@ -13,6 +13,7 @@ export default async function CadrageProjetPage({
   return (
     <ServiceOfferPage
       locale={locale}
+      visualKey="serviceScoping"
       eyebrow={isFr ? 'Cadrage projet' : 'Project scoping'}
       title={
         isFr ? 'Alignez votre projet systèmes d\'information avec vos priorités métier' : 'Align your information systems project with business priorities'

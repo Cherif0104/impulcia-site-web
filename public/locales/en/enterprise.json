@@ -101,6 +101,35 @@
     "eyebrow": "Our expertise",
     "title": "Areas of intervention",
     "subtitle": "From audit to operations — a complete enterprise offering.",
+    "solutions": [
+      {
+        "title": "Business solutions",
+        "items": [
+          "ERP for finance, procurement, logistics",
+          "CRM for pipeline, account and support",
+          "HRIS, people performance and payroll",
+          "B2B/B2G collaborative portals"
+        ]
+      },
+      {
+        "title": "Operations & execution",
+        "items": [
+          "Offline/online field data capture",
+          "Workflows, approval and compliance",
+          "API integration and interoperability",
+          "User change management"
+        ]
+      },
+      {
+        "title": "Decision intelligence",
+        "items": [
+          "Data platform, ETL/ELT",
+          "Executive dashboards and KPI",
+          "Predictive scoring and alerting",
+          "Data governance"
+        ]
+      }
+    ],
     "items": [
       { "title": "Digital transformation", "description": "Strategy, change management and deployment." },
       { "title": "ERP & business systems", "description": "Design, integration and information systems operations." },

@@ -2,13 +2,22 @@
 
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useMemo, useState } from 'react';
 import Button from '@/src/components/ui/Button';
 import WhatsAppButton from '@/src/components/forms/WhatsAppButton';
-import CoyaDashboardMock from './CoyaDashboardMock';
-import { partnerLogos } from '@/src/lib/media';
+import { heroSlides, partnerLogos } from '@/src/lib/media';
 import { trackAnalyticsEvent } from '@/src/lib/analytics-events';
+
+type HeroSlide = {
+  id: string;
+  src: string;
+  altFr: string;
+  altEn: string;
+  captionFr: string;
+  captionEn: string;
+};
 
 export default function EnterpriseHero() {
   const t = useTranslations('enterprise.hero');
@@ -16,6 +25,75 @@ export default function EnterpriseHero() {
   const tImpact = useTranslations('enterprise.impact');
   const impactItems = tImpact.raw('items') as { value: string; label: string }[];
   const proofLogos = partnerLogos.slice(0, 4);
+  const isFr = locale === 'fr';
+  const slides = useMemo<HeroSlide[]>(
+    () => [
+      {
+        id: 'erp-enterprise-platform',
+        src: heroSlides[0],
+        altFr: "Slide ERP enterprise platform d'IMPULCIA",
+        altEn: 'IMPULCIA ERP enterprise platform slide',
+        captionFr: 'ERP Enterprise Platform',
+        captionEn: 'ERP Enterprise Platform',
+      },
+      {
+        id: 'crm-sales-intelligence',
+        src: heroSlides[1],
+        altFr: 'Slide CRM et intelligence commerciale',
+        altEn: 'CRM and sales intelligence slide',
+        captionFr: 'CRM & Sales Intelligence',
+        captionEn: 'CRM & Sales Intelligence',
+      },
+      {
+        id: 'sirh-hr-platform',
+        src: heroSlides[2],
+        altFr: 'Slide plateforme SIRH',
+        altEn: 'HRIS platform slide',
+        captionFr: 'SIRH / HR Platform',
+        captionEn: 'HRIS / HR Platform',
+      },
+      {
+        id: 'data-business-intelligence',
+        src: heroSlides[3],
+        altFr: 'Slide data et business intelligence',
+        altEn: 'Data and business intelligence slide',
+        captionFr: 'Data & Business Intelligence',
+        captionEn: 'Data & Business Intelligence',
+      },
+      {
+        id: 'cloud-infrastructure',
+        src: heroSlides[4],
+        altFr: 'Slide cloud et infrastructure',
+        altEn: 'Cloud and infrastructure slide',
+        captionFr: 'Cloud & Infrastructure',
+        captionEn: 'Cloud & Infrastructure',
+      },
+      {
+        id: 'mobile-ecosystem',
+        src: heroSlides[5],
+        altFr: 'Slide ecosystème mobile',
+        altEn: 'Mobile ecosystem slide',
+        captionFr: 'Mobile Ecosystem',
+        captionEn: 'Mobile Ecosystem',
+      },
+    ],
+    []
+  );
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [failedSlides, setFailedSlides] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, 5500);
+    return () => window.clearInterval(timer);
+  }, [slides.length]);
+
+  const currentSlide = slides[activeSlide];
+  const currentSlideSrc = failedSlides[currentSlide.id] ? '/images/placeholders/hero-enterprise.svg' : currentSlide.src;
+
+  const goNext = () => setActiveSlide((prev) => (prev + 1) % slides.length);
+  const goPrev = () => setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
@@ -148,7 +226,64 @@ export default function EnterpriseHero() {
             </div>
           </motion.div>
 
-          <CoyaDashboardMock />
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl border border-brand-border/60 bg-brand-panel/40 aspect-[16/11] lg:aspect-[4/3]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide.id}
+                  initial={{ opacity: 0.25, scale: 1.03 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0.25, scale: 0.99 }}
+                  transition={{ duration: 0.45, ease: 'easeOut' }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={currentSlideSrc}
+                    alt={isFr ? currentSlide.altFr : currentSlide.altEn}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 620px"
+                    className="object-cover"
+                    onError={() => setFailedSlides((prev) => ({ ...prev, [currentSlide.id]: true }))}
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy/40 via-transparent to-transparent" />
+                </motion.div>
+              </AnimatePresence>
+              <button
+                type="button"
+                onClick={goPrev}
+                aria-label={isFr ? 'Slide precedente' : 'Previous slide'}
+                className="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border border-white/25 bg-black/35 text-white hover:bg-black/55 transition"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                onClick={goNext}
+                aria-label={isFr ? 'Slide suivante' : 'Next slide'}
+                className="absolute right-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border border-white/25 bg-black/35 text-white hover:bg-black/55 transition"
+              >
+                →
+              </button>
+              <div className="absolute bottom-3 left-3 rounded-md bg-black/45 px-3 py-1 text-xs text-white/90 border border-white/15">
+                {isFr ? currentSlide.captionFr : currentSlide.captionEn}
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-center gap-2" role="tablist" aria-label="Hero slides">
+              {slides.map((slide, i) => (
+                <button
+                  key={slide.id}
+                  type="button"
+                  onClick={() => setActiveSlide(i)}
+                  className={`h-2.5 rounded-full transition-all ${
+                    i === activeSlide ? 'w-8 bg-brand-accent' : 'w-2.5 bg-white/40 hover:bg-white/70'
+                  }`}
+                  aria-label={`${isFr ? 'Aller au slide' : 'Go to slide'} ${i + 1}`}
+                  aria-current={i === activeSlide}
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

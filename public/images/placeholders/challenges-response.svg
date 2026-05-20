@@ -1,0 +1,18 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0B1220"/>
+  <rect x="84" y="84" width="1432" height="732" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="176" fill="#D4A853" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">DEFIS VS REPONSE</text>
+  <text x="150" y="236" fill="#F8FAFC" font-size="50" font-family="Inter, Arial, sans-serif" font-weight="800">Avant / Apres accompagnement IMPULCIA</text>
+  <rect x="150" y="292" width="620" height="460" rx="22" fill="#0F172A" stroke="#7F1D1D"/>
+  <rect x="830" y="292" width="620" height="460" rx="22" fill="#0F172A" stroke="#14B8A6"/>
+  <text x="186" y="344" fill="#FCA5A5" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Risques et blocages</text>
+  <text x="866" y="344" fill="#5EEAD4" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Plan d'action et gains</text>
+  <g fill="#334155">
+    <rect x="186" y="390" width="520" height="14" rx="7"/>
+    <rect x="186" y="430" width="520" height="14" rx="7"/>
+    <rect x="186" y="470" width="460" height="14" rx="7"/>
+    <rect x="866" y="390" width="520" height="14" rx="7"/>
+    <rect x="866" y="430" width="520" height="14" rx="7"/>
+    <rect x="866" y="470" width="460" height="14" rx="7"/>
+  </g>
+</svg>

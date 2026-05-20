@@ -1,0 +1,18 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0B1220"/>
+  <rect x="84" y="84" width="1432" height="732" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="178" fill="#14B8A6" font-size="26" font-family="Inter, Arial, sans-serif" font-weight="700">SECTEURS</text>
+  <text x="150" y="240" fill="#F8FAFC" font-size="52" font-family="Inter, Arial, sans-serif" font-weight="800">Parcours par industrie</text>
+  <g fill="#0F172A" stroke="#334155">
+    <rect x="150" y="310" width="300" height="110" rx="18"/>
+    <rect x="470" y="310" width="300" height="110" rx="18"/>
+    <rect x="790" y="310" width="300" height="110" rx="18"/>
+    <rect x="1110" y="310" width="300" height="110" rx="18"/>
+    <rect x="150" y="450" width="300" height="110" rx="18"/>
+    <rect x="470" y="450" width="300" height="110" rx="18"/>
+    <rect x="790" y="450" width="300" height="110" rx="18"/>
+    <rect x="1110" y="450" width="300" height="110" rx="18"/>
+  </g>
+  <rect x="150" y="610" width="1260" height="150" rx="20" fill="#0B1220" stroke="#14B8A6" stroke-opacity="0.35"/>
+  <text x="190" y="690" fill="#94A3B8" font-size="24" font-family="Inter, Arial, sans-serif">Visualisation des parcours sectoriels pour orienter la navigation.</text>
+</svg>

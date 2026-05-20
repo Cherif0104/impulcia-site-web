@@ -11,7 +11,11 @@ import {
 export async function POST(request: NextRequest) {
   if (!getAdminSecret()) {
     return NextResponse.json(
-      { error: 'ADMIN_SECRET is not configured on the server' },
+      {
+        error: 'ADMIN_SECRET is not configured on the server',
+        missing: ['ADMIN_SECRET'],
+        hint: 'Set ADMIN_SECRET in .env.local (min 32 characters) or use the dev fallback documented in .env.example',
+      },
       { status: 503 }
     );
   }

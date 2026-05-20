@@ -40,4 +40,53 @@ body {
   .section-container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
+
+  .marquee-row {
+    @apply relative overflow-hidden;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .marquee-track {
+    @apply flex items-stretch gap-3 w-max;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+
+  .marquee-left {
+    animation-name: marquee-left;
+  }
+
+  .marquee-right {
+    animation-name: marquee-right;
+  }
+
+  .marquee-item {
+    flex: 0 0 auto;
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
 }

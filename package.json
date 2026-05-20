@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "node ./node_modules/next/dist/bin/next dev -p 4174 --webpack",
     "dev:turbopack": "node ./node_modules/next/dist/bin/next dev -p 4174",
-    "build": "node ./node_modules/next/dist/bin/next build",
+    "build": "node ./scripts/build-stable.mjs",
     "start": "node ./node_modules/next/dist/bin/next start -p 4174",
     "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .ts,.tsx --max-warnings=0",
     "typecheck": "node ./node_modules/typescript/bin/tsc --noEmit",

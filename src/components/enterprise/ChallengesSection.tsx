@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import SectionHeading from '@/src/components/ui/SectionHeading';
+import SectionVisual from './SectionVisual';
 
 export default function ChallengesSection() {
   const t = useTranslations('enterprise.challenges');
@@ -13,6 +14,12 @@ export default function ChallengesSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-brand-gold/5 via-transparent to-brand-accent/5" />
       <div className="section-container relative">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <SectionVisual
+          visualKey="challenges"
+          alt="Comparatif des défis et réponses opérationnelles IMPULCIA"
+          className="mb-8 aspect-[16/6]"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <h3 className="text-lg font-semibold text-brand-gold mb-4">Les défis</h3>

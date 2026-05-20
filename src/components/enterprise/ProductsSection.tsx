@@ -7,6 +7,7 @@ import SectionHeading from '@/src/components/ui/SectionHeading';
 import Button from '@/src/components/ui/Button';
 import { getProductFallbackLogo, getProductLogo } from '@/src/lib/media';
 import { trackAnalyticsEvent } from '@/src/lib/analytics-events';
+import SectionVisual from './SectionVisual';
 
 type Product = {
   id: string;
@@ -26,6 +27,12 @@ export default function ProductsSection() {
     <section id="products" className="py-24 bg-brand-slate/20">
       <div className="section-container">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <SectionVisual
+          visualKey="products"
+          alt={locale === 'fr' ? 'Vue du portefeuille de solutions IMPULCIA' : 'IMPULCIA product portfolio overview'}
+          className="mb-8 aspect-[16/6]"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {items.map((product, i) => {
             const logoSrc = getProductLogo(product.id);

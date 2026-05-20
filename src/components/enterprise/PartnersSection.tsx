@@ -1,44 +1,42 @@
 'use client';
 
-import Image from 'next/image';
-import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import SectionHeading from '@/src/components/ui/SectionHeading';
-import { getPartnerLogoSrc, partnerLogos } from '@/src/lib/media';
-
-function PartnerLogoCard({ name, src }: { name: string; src: string }) {
-  const [imgSrc, setImgSrc] = useState(getPartnerLogoSrc(src));
-
-  return (
-    <div
-      className="group flex items-center justify-center h-24 px-4 rounded-xl glass-panel border-brand-border/40 hover:border-brand-accent/30 transition-all"
-      title={name}
-    >
-      <Image
-        src={imgSrc}
-        alt={name}
-        width={120}
-        height={48}
-        className="max-h-12 w-auto object-contain opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
-        onError={() => setImgSrc('/images/brand/impulcia-alt.png')}
-      />
-    </div>
-  );
-}
+import AsyncMarqueeRows from '@/src/components/enterprise/AsyncMarqueeRows';
+import { partnerLogos } from '@/src/lib/media';
 
 export default function PartnersSection() {
   const t = useTranslations('enterprise.partners');
   const locale = useLocale();
+  const isFr = locale === 'fr';
+  const rows = [
+    { id: 'partners-row-1', direction: 'left' as const, durationSec: 34, items: partnerLogos.slice(0, 8).map((item) => ({ id: item.id, label: item.name, src: item.src, subtitle: isFr ? 'Compte enterprise' : 'Enterprise account' })) },
+    { id: 'partners-row-2', direction: 'right' as const, durationSec: 29, items: partnerLogos.slice(6, 14).map((item) => ({ id: item.id, label: item.name, src: item.src, subtitle: isFr ? 'Programme institutionnel' : 'Institutional program' })) },
+    { id: 'partners-row-3', direction: 'left' as const, durationSec: 41, items: partnerLogos.slice(10).concat(partnerLogos.slice(0, 4)).map((item) => ({ id: item.id, label: item.name, src: item.src, subtitle: isFr ? 'Projet multi-pays' : 'Multi-country delivery' })) },
+  ];
 
   return (
     <section id="partners" className="py-24">
       <div className="section-container">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {partnerLogos.map((partner) => (
-            <PartnerLogoCard key={partner.id} name={partner.name} src={partner.src} />
-          ))}
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <article className="glass-panel rounded-xl border border-brand-border/50 p-4">
+            <p className="text-xs uppercase tracking-wide text-brand-muted mb-1">{isFr ? 'Ecosysteme' : 'Ecosystem'}</p>
+            <p className="text-2xl font-semibold text-white">{partnerLogos.length}+</p>
+            <p className="text-sm text-brand-muted">{isFr ? 'References actives' : 'Active references'}</p>
+          </article>
+          <article className="glass-panel rounded-xl border border-brand-border/50 p-4">
+            <p className="text-xs uppercase tracking-wide text-brand-muted mb-1">{isFr ? 'Couverture' : 'Coverage'}</p>
+            <p className="text-2xl font-semibold text-white">4</p>
+            <p className="text-sm text-brand-muted">{isFr ? 'Zones geographiques' : 'Geographic zones'}</p>
+          </article>
+          <article className="glass-panel rounded-xl border border-brand-border/50 p-4">
+            <p className="text-xs uppercase tracking-wide text-brand-muted mb-1">{isFr ? 'Execution' : 'Execution'}</p>
+            <p className="text-2xl font-semibold text-white">24/7</p>
+            <p className="text-sm text-brand-muted">{isFr ? 'Support programmes critiques' : 'Critical program support'}</p>
+          </article>
         </div>
+        <AsyncMarqueeRows rows={rows} locale={locale} />
         <div className="mt-8 text-center">
           <a
             href={`/${locale}/realisations`}

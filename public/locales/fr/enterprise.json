@@ -101,6 +101,35 @@
     "eyebrow": "Nos expertises",
     "title": "Domaines d'intervention",
     "subtitle": "De l'audit à l'exploitation — une offre enterprise complète.",
+    "solutions": [
+      {
+        "title": "Solutions metiers",
+        "items": [
+          "ERP finance, achats, logistique",
+          "CRM vente, relation client et SAV",
+          "SIRH, performance RH et paie",
+          "Portails collaboratifs B2B/B2G"
+        ]
+      },
+      {
+        "title": "Operations & execution",
+        "items": [
+          "Collecte terrain offline/online",
+          "Workflows, validation et conformite",
+          "Intégration API et interoperability",
+          "Conduite du changement utilisateur"
+        ]
+      },
+      {
+        "title": "Pilotage decisionnel",
+        "items": [
+          "Data platform, ETL/ELT",
+          "Dashboards executives et KPI",
+          "Predictif, scoring et alerting",
+          "Gouvernance des donnees"
+        ]
+      }
+    ],
     "items": [
       { "title": "Transformation digitale", "description": "Stratégie, conduite du changement et déploiement." },
       { "title": "ERP & systèmes métiers", "description": "Conception, intégration et exploitation des systèmes d'information." },
